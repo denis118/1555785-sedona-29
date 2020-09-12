@@ -1,0 +1,13 @@
+/*****mainFirstPage*****/
+main {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: 509px 216px 256px 330px 256px 256px 291px 472px;
+}

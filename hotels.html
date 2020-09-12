@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+
+    <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
+
+    <div class="generalContainer firstPage">
+
+      <header>
+        <a href="index.html">
+          <img id="logo" src="img/logo/logo.svg" alt="Логотип сайта" width="138" height="70">
+        </a>
+        <nav>
+          <ul id="generalNavigationList">
+            <li>
+              <ul id="leftSideNavigationList">
+                <li id="information">
+                  <a href="blank.html" target="_blank">Информация</a>
+                </li>
+                <li id="photoAndVideo">
+                  <a href="blank.html" target="_blank">Фото и видео</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul id="rightSideNavigationList">
+                <li id="stateMap">
+                  <a href="blank.html" target="_blank">Карта штата</a>
+                </li>
+                <li id="hotels">
+                  <a href="hotels.html" target="_blank">Гостиницы</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <h1>Гостиницы Седоны. Подходящие предложения</h1>
+
+        <section id="filter">
+          <h2>Фильтр</h2>
+          <!-- <form action=""></form> -->
+        </section>
+
+        <section id="searchResults">
+          <h2>Результаты поиска</h2>
+          <div id="range">
+            <div id="sortingInterface">
+                <div id="itemsAmount">
+                  <span>Найдено:</span>
+                  <span>3</span>
+                </div>
+                <div id="displayModes">
+                  <p>Сортировка:</p>
+                  <ul>
+                    <li>
+                      <a href="blank.html" target="_parent">По цене</a>
+                    </li>
+                    <li>
+                      <a href="blank.html" target="_parent">По типу</a>
+                    </li>
+                    <li>
+                      <a href="blank.html" target="_parent">По рейтингу</a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            <div id="upDownButtons">
+              <button name="up"></button>
+              <button name="down"></button>
+            </div>
+          </div>
+          <div id="hotelSamples">
+            <ul>
+              <li>
+                <div class="proposedHotel">
+                  <a href="hotels/Amara Resort & Spa.html" target="_blank">
+                    <div class="imageContainer" style="background-image: url(img/hotels/Amara\ Resort\ &\ Spa.png); width: 135px; height: 90px;"></div>
+                  </a>
+                  <div>
+                    <h3>
+                      <a href="hotels/Amara Resort & Spa.html" target="_blank">
+                        Amara Resort & Spa
+                      </a>
+                    </h3>
+                    <div>
+                      <span>Гостиница</span>
+                      <span>От 4000 Р.</span>
+                    </div>
+                    <div>
+                      <a href="hotels/Amara Resort & Spa.html" target="_blank">
+                        Подробнее
+                      </a>
+                      <button name="amaraResort&Spa">Забронировать</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="hotelRating">
+                  <div class="stars">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                  </div>
+                  <div class="numberOfPoints">
+                    <span>Рейтинг:</span>
+                    <span>8.5</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="proposedHotel">
+                  <a href="hotels/Desert Quail Inn.html" target="_blank">
+                    <div class="imageContainer" style="background-image: url(img/hotels/Desert\ Quail\ Inn.png); width: 135px; height: 90px;"></div>
+                  </a>
+                  <div>
+                    <h3>
+                      <a href="hotels/Desert Quail Inn.html" target="_blank">
+                        Desert Quail Inn
+                      </a>
+                    </h3>
+                    <div>
+                      <span>Мотель</span>
+                      <span>От 3000 Р.</span>
+                    </div>
+                    <div>
+                      <a href="hotels/Desert Quail Inn.html" target="_blank">
+                        Подробнее
+                      </a>
+                      <button name="desertQuailInn">Забронировать</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="hotelRating">
+                  <div class="stars">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                  </div>
+                  <div class="numberOfPoints">
+                    <span>Рейтинг:</span>
+                    <span>8.9</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="proposedHotel">
+                  <a href="hotels/Villas at Poco Diablo.html" target="_blank">
+                    <div class="imageContainer" style="background-image: url(img/hotels/Villas\ at\ Poco\ Diablo.png); width: 135px; height: 90px;"></div>
+                  </a>
+                  <div>
+                    <h3>
+                      <a href="hotels/Villas at Poco Diablo.html" target="_blank">
+                        Villas at Poco Diablo
+                      </a>
+                    </h3>
+                    <div>
+                      <span>Апартаменты</span>
+                      <span>От 2000 Р.</span>
+                    </div>
+                    <div>
+                      <a href="hotels/Villas at Poco Diablo.html" target="_blank">
+                        Подробнее
+                      </a>
+                      <button name="villasAtPocoDiablo">Забронировать</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="hotelRating">
+                  <div class="stars">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                  </div>
+                  <div class="numberOfPoints">
+                    <span>Рейтинг:</span>
+                    <span>9.2</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>
+          <p>
+            #visitSEDONA
+          </p>
+          <p>
+            ТЕЛ: +7(495) 666-01-66
+          </p>
+        </div>
+        <div>
+          <a href="#">
+            <img src="https://via.placeholder.com/46x48" alt="Твиттер">
+          </a>
+          <a href="#">
+            <img src="https://via.placeholder.com/46x48" alt="Фейсбук">
+          </a>
+          <a href="#">
+            <img src="https://via.placeholder.com/46x48" alt="Ютуб">
+          </a>
+        </div>
+        <div>
+          <p>
+            Website by
+          </p>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+            <img src="https://via.placeholder.com/100x48" alt="Логотип HTML Academy">
+          </a>
+        </div>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
