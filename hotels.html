@@ -8,55 +8,51 @@
 
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
 
-    <div class="generalContainer firstPage">
+    <div class="generalContainer secondPage">
 
       <header>
-        <a href="index.html">
-          <img id="logo" src="img/logo/logo.svg" alt="Логотип сайта" width="138" height="70">
+
+        <a>
+          <img class="logo" src="img/logo/logo.svg" width="138" height="70" alt="Логотип сайта">
         </a>
+
         <nav>
-          <ul id="generalNavigationList">
+          <ul class="generalNavigationList">
             <li>
-              <ul id="leftSideNavigationList">
-                <li id="information">
-                  <a href="blank.html" target="_blank">Информация</a>
-                </li>
-                <li id="photoAndVideo">
-                  <a href="blank.html" target="_blank">Фото и видео</a>
-                </li>
-              </ul>
+              <a href="blank.html">Информация</a>
             </li>
             <li>
-              <ul id="rightSideNavigationList">
-                <li id="stateMap">
-                  <a href="blank.html" target="_blank">Карта штата</a>
-                </li>
-                <li id="hotels">
-                  <a href="hotels.html" target="_blank">Гостиницы</a>
-                </li>
-              </ul>
+              <a href="blank.html">Фото и видео</a>
+            </li>
+            <li>
+              <a href="blank.html">Карта штата</a>
+            </li>
+            <li>
+              <a href="hotels.html">Гостиницы</a>
             </li>
           </ul>
         </nav>
+
       </header>
 
       <main>
-        <h1>Гостиницы Седоны. Подходящие предложения</h1>
 
-        <section id="filter">
-          <h2>Фильтр</h2>
+        <h1 class="visuallyHidden">Гостиницы Седоны. Подходящие предложения</h1>
+
+        <section>
+          <h2 class="visuallyHidden">Фильтр</h2>
           <!-- <form action=""></form> -->
         </section>
 
-        <section id="searchResults">
-          <h2>Результаты поиска</h2>
-          <div id="range">
-            <div id="sortingInterface">
-                <div id="itemsAmount">
+        <section>
+          <h2 class="visuallyHidden">Результаты поиска</h2>
+          <div>
+            <div>
+                <div>
                   <span>Найдено:</span>
                   <span>3</span>
                 </div>
-                <div id="displayModes">
+                <div>
                   <p>Сортировка:</p>
                   <ul>
                     <li>
@@ -71,21 +67,21 @@
                   </ul>
                 </div>
             </div>
-            <div id="upDownButtons">
+            <div>
               <button name="up"></button>
               <button name="down"></button>
             </div>
           </div>
-          <div id="hotelSamples">
+          <div>
             <ul>
               <li>
                 <div class="proposedHotel">
-                  <a href="hotels/amaraResort&Spa.html" target="_blank">
-                    <div class="imageContainer" style="background-image: url(img/hotels/Amara\ Resort\ &\ Spa.png); width: 135px; height: 90px;"></div>
+                  <a href="hotels/amaraResort&Spa.html">
+                    <img src="img/hotels/amaraResort&Spa.png" width="135" height="90" alt="Амара Резорт эн Спа">
                   </a>
                   <div>
                     <h3>
-                      <a href="hotels/amaraResort&Spa.html" target="_blank">
+                      <a href="hotels/amaraResort&Spa.html">
                         Amara Resort & Spa
                       </a>
                     </h3>
@@ -94,20 +90,22 @@
                       <span>От 4000 Р.</span>
                     </div>
                     <div>
-                      <a href="hotels/amaraResort&Spa.html" target="_blank">
+                      <a href="hotels/amaraResort&Spa.html">
                         Подробнее
                       </a>
-                      <button name="amaraResort&Spa">Забронировать</button>
+                      <a href="hotels/amaraResort&Spa.html">
+                        Забронировать
+                      </a>
                     </div>
                   </div>
                 </div>
                 <div class="hotelRating">
                   <div class="stars">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
                   </div>
                   <div class="numberOfPoints">
                     <span>Рейтинг:</span>
@@ -117,12 +115,12 @@
               </li>
               <li>
                 <div class="proposedHotel">
-                  <a href="hotels/desertQuailInn.html" target="_blank">
-                    <div class="imageContainer" style="background-image: url(img/hotels/Desert\ Quail\ Inn.png); width: 135px; height: 90px;"></div>
+                  <a href="hotels/desertQuailInn.html">
+                    <img src="img/hotels/desertQuailInn.png" width="135" height="90" alt="Дэзёт Квэил Ин">
                   </a>
                   <div>
                     <h3>
-                      <a href="hotels/desertQuailInn.html" target="_blank">
+                      <a href="hotels/desertQuailInn.html">
                         Desert Quail Inn
                       </a>
                     </h3>
@@ -131,18 +129,20 @@
                       <span>От 3000 Р.</span>
                     </div>
                     <div>
-                      <a href="hotels/desertQuailInn.html" target="_blank">
+                      <a href="hotels/desertQuailInn.html">
                         Подробнее
                       </a>
-                      <button name="desertQuailInn">Забронировать</button>
+                      <a href="hotels/amaraResort&Spa.html">
+                        Забронировать
+                      </a>
                     </div>
                   </div>
                 </div>
                 <div class="hotelRating">
                   <div class="stars">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
                   </div>
                   <div class="numberOfPoints">
                     <span>Рейтинг:</span>
@@ -152,12 +152,12 @@
               </li>
               <li>
                 <div class="proposedHotel">
-                  <a href="hotels/villasAtPocoDiablo.html" target="_blank">
-                    <div class="imageContainer" style="background-image: url(img/hotels/Villas\ at\ Poco\ Diablo.png); width: 135px; height: 90px;"></div>
+                  <a href="hotels/villasAtPocoDiablo.html">
+                    <img src="img/hotels/villasAtPocoDiablo.png" width="135" height="90" alt="Вилла Эт Поко Диабло">
                   </a>
                   <div>
                     <h3>
-                      <a href="hotels/villasAtPocoDiablo.html" target="_blank">
+                      <a href="hotels/villasAtPocoDiablo.html">
                         Villas at Poco Diablo
                       </a>
                     </h3>
@@ -166,17 +166,19 @@
                       <span>От 2000 Р.</span>
                     </div>
                     <div>
-                      <a href="hotels/villasAtPocoDiablo.html" target="_blank">
+                      <a href="hotels/villasAtPocoDiablo.html">
                         Подробнее
                       </a>
-                      <button name="villasAtPocoDiablo">Забронировать</button>
+                      <a href="hotels/amaraResort&Spa.html">
+                        Забронировать
+                      </a>
                     </div>
                   </div>
                 </div>
                 <div class="hotelRating">
                   <div class="stars">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
-                    <img src="https://via.placeholder.com/18x17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
+                    <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
                   </div>
                   <div class="numberOfPoints">
                     <span>Рейтинг:</span>
@@ -190,33 +192,35 @@
       </main>
 
       <footer>
+
         <div>
           <p>
             #visitSEDONA
           </p>
           <p>
-            ТЕЛ: +7(495) 666-01-66
+            ТЕЛ:<a href="tel:+74956660166"> +7(495) 666-01-66</a>
           </p>
         </div>
         <div>
           <a href="#">
-            <img src="https://via.placeholder.com/46x48" alt="Твиттер">
+            <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Твиттер">
           </a>
           <a href="#">
-            <img src="https://via.placeholder.com/46x48" alt="Фейсбук">
+            <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Фейсбук">
           </a>
           <a href="#">
-            <img src="https://via.placeholder.com/46x48" alt="Ютуб">
+            <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Ютуб">
           </a>
         </div>
         <div>
-          <p>
+          <span>
             Website by
-          </p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
-            <img src="https://via.placeholder.com/100x48" alt="Логотип HTML Academy">
+          </span>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="https://via.placeholder.com/100x48" width="100" height="48" alt="Логотип HTML Academy">
           </a>
         </div>
+
       </footer>
 
     </div>
