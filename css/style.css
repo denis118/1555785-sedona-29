@@ -26,3 +26,11 @@ body {
   grid-template-columns: repeat(3, 400px);
   grid-template-rows: 56px 2586px 120px;
 }
+
+.visuallyHidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

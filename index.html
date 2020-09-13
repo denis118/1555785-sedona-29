@@ -1,176 +1,185 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <!-- <link rel="stylesheet" href="css/fonts.css"> -->
-    <!-- <link rel="stylesheet" href="css/stylesReset.css"> -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
+<head>
+  <meta charset="utf-8">
+  <!-- <link rel="stylesheet" href="css/fonts.css"> -->
+  <!-- <link rel="stylesheet" href="css/stylesReset.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <title>HTML Academy: Седона</title>
+</head>
 
-    <div class="generalContainer firstPage">
+<body>
 
-      <header>
-        <a>
-          <img id="logo" src="img/logo/logo.svg" alt="Логотип сайта" width="138" height="70">
+  <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
+
+  <div class="generalContainer firstPage">
+
+    <header>
+
+      <a>
+        <img class="logo" src="img/logo/logo.svg" width="138" height="70" alt="Логотип сайта">
+      </a>
+
+      <nav>
+        <ul class="generalNavigationList">
+          <li>
+            <a href="blank.html">Информация</a>
+          </li>
+          <li>
+            <a href="blank.html">Фото и видео</a>
+          </li>
+          <li>
+            <a href="blank.html">Карта штата</a>
+          </li>
+          <li>
+            <a href="hotels.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <main>
+
+      <h1>Sedona</h1>
+
+      <section>
+        <h2 class="visuallyHidden">Приветствие</h2>
+        <p>
+          Welcome to the gargeous Sedona
+        </p>
+        <p>
+          "Because the Grand Canyon sucks!"
+        </p>
+      </section>
+
+      <section>
+        <h2 class="visuallyHidden">Преимущества</h2>
+        <p>
+          Седона - небольшой городок в Аризоне, заслуживающий большего!
+        </p>
+        <p>
+          Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+        </p>
+        <ol>
+          <li>
+            <p>
+              Настоящий городок
+            </p>
+            <p>
+              Седона - не аттракцион для туристов, там течёт своя жизнь
+            </p>
+            <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Вид одного из зданий города">
+            <ul>
+              <li>
+                <h3>Жильё</h3>
+                <p>
+                  Рекомендуем пожить в настоящем мотеле, всё как в кино!
+                </p>
+              </li>
+              <li>
+                <h3>Еда</h3>
+                <p>
+                  Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                </p>
+              </li>
+              <li>
+                <h3>Сувениры</h3>
+                <p>
+                  Не только китайского, но и местного производства!
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              Там есть мост Дьявола
+            </p>
+            <p>
+              Да, по нему можно пройти! Если конечно вы осмелитесь
+            </p>
+            <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Мост Дьявола">
+          </li>
+          <li>
+            <p>
+              Небольшая площадь
+            </p>
+            <p>
+              Все достопримечательности находятся очень близко
+            </p>
+          </li>
+          <li>
+            <p>
+              Красивая дорога
+            </p>
+            <p>
+              Ехать в Седону из Лас-Вегаса совсем не скучно!
+            </p>
+          </li>
+          <li>
+            <p>
+              Мало туристов
+            </p>
+            <p>
+              Большинство едет в Гранд Каньон и толпится там
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="visuallyHidden">Гостиницы в Седоне</h2>
+        <p>
+          Заинтересовались?
+        </p>
+        <p>
+          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+        </p>
+        <button name="hotelSearchButton">Поиск гостиницы в Седоне</button>
+      </section>
+
+      <section>
+        <h2 class="visuallyHidden">Седона на карте</h2>
+        <img src="https://via.placeholder.com/1199x594" width="1199" height="594" alt="Седона на карте">
+      </section>
+
+    </main>
+
+    <footer>
+
+      <div>
+        <p>
+          #visitSEDONA
+        </p>
+        <p>
+          ТЕЛ:<a href="tel:+74956660166"> +7(495) 666-01-66</a>
+        </p>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Твиттер">
         </a>
-        <nav>
-          <ul id="generalNavigationList">
-            <li>
-              <ul id="leftSideNavigationList">
-                <li id="information">
-                  <a href="blank.html" target="_blank">Информация</a>
-                </li>
-                <li id="photoAndVideo">
-                  <a href="blank.html" target="_blank">Фото и видео</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul id="rightSideNavigationList">
-                <li id="stateMap">
-                  <a href="blank.html" target="_blank">Карта штата</a>
-                </li>
-                <li id="hotels">
-                  <a href="hotels.html" target="_blank">Гостиницы</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </header>
+        <a href="#">
+          <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Фейсбук">
+        </a>
+        <a href="#">
+          <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Ютуб">
+        </a>
+      </div>
+      <div>
+        <span>
+          Website by
+        </span>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="https://via.placeholder.com/100x48" width="100" height="48" alt="Логотип HTML Academy">
+        </a>
+      </div>
 
-      <main>
-        <h1>Sedona</h1>
+    </footer>
 
-        <section id="greeting">
-          <h2>Приветствие</h2>
-          <p>
-            Welcome to the gargeous Sedona
-          </p>
-          <p>
-            "Because the Grand Canyon sucks!"
-          </p>
-        </section>
+  </div>
 
-        <section id="advantages">
-          <h2>Преимущества</h2>
-          <p>
-            Седона - небольшой городок в Аризоне, заслуживающий большего!
-          </p>
-          <p>
-            Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
-          </p>
-          <ol>
-            <li>
-              <dl>
-                <dt>Настоящий городок</dt>
-                <dd>
-                  Седона - не аттракцион для туристов, там течёт своя жизнь
-                </dd>
-              </dl>
-              <img src="https://via.placeholder.com/800x256" alt="Вид одного из зданий города">
-            </li>
-            <li>
-              <dl>
-                <dt>Там есть мост Дьявола</dt>
-                <dd>
-                  Да, по нему можно пройти! Если конечно вы осмелитесь
-                </dd>
-              </dl>
-              <img src="https://via.placeholder.com/800x256" alt="Мост Дьявола">
-            </li>
-            <li>
-              <dl>
-                <dt>Небольшая площадь</dt>
-                <dd>
-                  Все достопримечательности находятся очень близко
-                </dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Красивая дорога</dt>
-                <dd>
-                  Ехать в Седону из Лас-Вегаса совсем не скучно!
-                </dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Мало туристов</dt>
-                <dd>
-                  Большинство едет в Гранд Каньон и толпится там
-                </dd>
-              </dl>
-            </li>
-          </ol>
-        </section>
+</body>
 
-        <section id="tips">
-          <h2>Советы</h2>
-          <h3>Жильё</h3>
-          <p>
-            Рекомендуем пожить в настоящем мотеле, всё как в кино!
-          </p>
-          <h3>Еда</h3>
-          <p>
-            Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-          </p>
-          <h3>Сувениры</h3>
-          <p>
-            Не только китайского, но и местного производства!
-          </p>
-        </section>
-
-        <section id="sedonaHotels">
-          <h2>Гостиницы в Седоне</h2>
-          <p>
-            Заинтересовались? Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
-          </p>
-          <button id="hotelSearchButton">Поиск гостиницы в Седоне</button>
-        </section>
-
-        <section id="map">
-          <h2>Седона на карте</h2>
-          <img src="https://via.placeholder.com/1199x594" alt="Седона на карте">
-        </section>
-      </main>
-
-      <footer>
-        <div>
-          <p>
-            #visitSEDONA
-          </p>
-          <p>
-            ТЕЛ: +7(495) 666-01-66
-          </p>
-        </div>
-        <div>
-          <a href="#">
-            <img src="https://via.placeholder.com/46x48" alt="Твиттер">
-          </a>
-          <a href="#">
-            <img src="https://via.placeholder.com/46x48" alt="Фейсбук">
-          </a>
-          <a href="#">
-            <img src="https://via.placeholder.com/46x48" alt="Ютуб">
-          </a>
-        </div>
-        <div>
-          <p>
-            Website by
-          </p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
-            <img src="https://via.placeholder.com/100x48" alt="Логотип HTML Academy">
-          </a>
-        </div>
-      </footer>
-
-    </div>
-
-  </body>
 </html>
