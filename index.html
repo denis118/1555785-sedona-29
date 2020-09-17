@@ -1,183 +1,129 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
-  <!-- <link rel="stylesheet" href="css/fonts.css"> -->
-  <!-- <link rel="stylesheet" href="css/stylesReset.css"> -->
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Седона</title>
 </head>
 
-<body>
+<body class="pageBody">
 
   <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
 
-  <div class="generalContainer firstPage">
+  <div class="mainContainer mainPage">
 
-    <header>
-
-      <a>
-        <img class="logo" src="img/logo/logo.svg" width="138" height="70" alt="Логотип сайта">
-      </a>
-
-      <nav>
-        <ul class="generalNavigationList">
-          <li>
-            <a href="blank.html">Информация</a>
-          </li>
-          <li>
-            <a href="blank.html">Фото и видео</a>
-          </li>
-          <li>
-            <a href="blank.html">Карта штата</a>
-          </li>
-          <li>
-            <a href="hotels.html">Гостиницы</a>
-          </li>
+    <header class="mainHeader">
+      <nav class="mainNavigation">
+        <a><img class="mainHeaderLogo" src="img/logo/logo.svg" width="138" height="70" alt="Логотип сайта"></a>
+        <ul class="mainNavigationList">
+          <li class="mainNavigationListItem"><a class="link" href="blank.html">Информация</a></li>
+          <li class="mainNavigationListItem"><a class="link" href="blank.html">Фото и видео</a></li>
+          <li class="mainNavigationListItem"><a class="link" href="blank.html">Карта штата</a></li>
+          <li class="mainNavigationListItem"><a class="link" href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
-
     </header>
 
-    <main>
+    <main class="main">
+      <h1 class="visuallyHidden">Sedona</h1>
 
-      <h1>Sedona</h1>
-
-      <section>
+      <section class="greeting">
         <h2 class="visuallyHidden">Приветствие</h2>
-        <p>
-          Welcome to the gargeous Sedona
-        </p>
-        <p>
-          "Because the Grand Canyon sucks!"
-        </p>
+        <p>Welcome to the gargeous Sedona</p>
+        <p>"Because the Grand Canyon sucks!"</p>
       </section>
+      <!-- <section class="greeting">
+        <h2 class="visuallyHidden">Приветствие</h2>
+        <img class="sedonaNature" src="https://via.placeholder.com/1200x509" width="1200" height="509" alt="Природа Седоны">
+        <img class="welcomeToSedonaText" src="https://via.placeholder.com/456x350" width="456.65" height="350.88" alt="Добро пожаловать в Седону">
+      </section> -->
+      <!-- Белую маску добавить через CSS -->
 
-      <section>
+      <section class="advantages">
         <h2 class="visuallyHidden">Преимущества</h2>
-        <p>
-          Седона - небольшой городок в Аризоне, заслуживающий большего!
-        </p>
-        <p>
-          Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
-        </p>
-        <ol>
-          <li>
-            <p>
-              Настоящий городок
-            </p>
-            <p>
-              Седона - не аттракцион для туристов, там течёт своя жизнь
-            </p>
-            <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Вид одного из зданий города">
-            <ul>
-              <li>
-                <h3>Жильё</h3>
-                <p>
-                  Рекомендуем пожить в настоящем мотеле, всё как в кино!
-                </p>
+        <p class="subtitle">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p class="text fiveReasonsHeadline">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <ol class="advantagesList">
+          <li class="advantagesItem trueCity">
+            <div class="trueCityMainContent">
+              <p class="subject ">Настоящий городок</p>
+              <p class="text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+              <img class="sedonaBuildingPhoto" src="https://via.placeholder.com/800x256" width="800" height="256"
+                alt="Вид одного из зданий города">
+            </div>
+            <ul class="trueCityList">
+              <li class="trueCityListItem">
+                <h3 class="subject">Жильё</h3>
+                <p class="text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li>
-                <h3>Еда</h3>
-                <p>
-                  Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-                </p>
+              <li class="trueCityListItem">
+                <h3 class="subject">Еда</h3>
+                <p class="text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li>
-                <h3>Сувениры</h3>
-                <p>
-                  Не только китайского, но и местного производства!
-                </p>
+              <li class="trueCityListItem">
+                <h3 class="subject">Сувениры</h3>
+                <p class="text">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
-          <li>
-            <p>
-              Там есть мост Дьявола
-            </p>
-            <p>
-              Да, по нему можно пройти! Если конечно вы осмелитесь
-            </p>
-            <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Мост Дьявола">
+          <li class="advantagesItem">
+            <p class="subject">Там есть мост Дьявола</p>
+            <p class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <img class="devilBridgePhoto" src="https://via.placeholder.com/800x256" width="800" height="256"
+              alt="Мост Дьявола">
           </li>
-          <li>
-            <p>
-              Небольшая площадь
-            </p>
-            <p>
-              Все достопримечательности находятся очень близко
-            </p>
+          <li class="advantagesItem">
+            <p class="subject">Небольшая площадь</p>
+            <p class="text">Все достопримечательности находятся очень близко</p>
           </li>
-          <li>
-            <p>
-              Красивая дорога
-            </p>
-            <p>
-              Ехать в Седону из Лас-Вегаса совсем не скучно!
-            </p>
+          <li class="advantagesItem">
+            <p class="subject">Красивая дорога</p>
+            <p class="text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li>
-            <p>
-              Мало туристов
-            </p>
-            <p>
-              Большинство едет в Гранд Каньон и толпится там
-            </p>
+          <li class="advantagesItem">
+            <p class="subject">Мало туристов</p>
+            <p class="text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ol>
       </section>
 
-      <section>
+      <section class="sedonaHotels">
         <h2 class="visuallyHidden">Гостиницы в Седоне</h2>
-        <p>
-          Заинтересовались?
-        </p>
-        <p>
-          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
-        </p>
-        <a href="blank.html">
-          Поиск гостиницы в Седоне
-        </a>
+        <div class="containerForHotelSearchText">
+          <p class="questionOfInterest">Заинтересовались?</p>
+          <p class="text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        </div>
+        <a class="button hotelSearch" href="blank.html">Поиск гостиницы в Седоне</a>
       </section>
 
-      <section>
+      <section class="map">
         <h2 class="visuallyHidden">Седона на карте</h2>
-        <img src="https://via.placeholder.com/1199x594" width="1199" height="594" alt="Седона на карте">
+        <img class="mapImage" src="https://via.placeholder.com/1199x594" width="1199" height="594"
+          alt="Седона на карте">
       </section>
-
     </main>
 
-    <footer>
-
-      <div>
-        <p>
-          #visitSEDONA
-        </p>
-        <p>
-          ТЕЛ:<a href="tel:+74956660166"> +7(495) 666-01-66</a>
-        </p>
+    <footer class="footer">
+      <div class="contactsAndCopyright">
+        <p class="caption">#visitSEDONA</p>
+        <p class="caption">ТЕЛ:<a class="link contactPhone" href="tel:+74956660166"> +7(495) 666-01-66</a></p>
       </div>
-      <div>
-        <a href="#">
-          <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Твиттер">
-        </a>
-        <a href="#">
-          <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Фейсбук">
-        </a>
-        <a href="#">
-          <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Ютуб">
-        </a>
+      <div class="contactsAndCopyright">
+        <a class="button social" href="#"><img class="icon social" src="https://via.placeholder.com/46x48" width="46"
+            height="48" alt="Твиттер"></a>
+        <a class="button social" href="#"><img class="icon social" src="https://via.placeholder.com/46x48" width="46"
+            height="48" alt="Фейсбук"></a>
+        <a class="button social" href="#"><img class="icon social" src="https://via.placeholder.com/46x48" width="46"
+            height="48" alt="Ютуб"></a>
       </div>
-      <div>
-        <span>
-          Website by
-        </span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="https://via.placeholder.com/100x48" width="100" height="48" alt="Логотип HTML Academy">
-        </a>
+      <div class="contactsAndCopyright">
+        <span class="websiteBy">Website by</span>
+        <a class="link htmlAcademy" href="https://htmlacademy.ru/intensive/htmlcss"><img class="htmlAcademyLogotype"
+            src="https://via.placeholder.com/100x48" width="100" height="48" alt="Логотип HTML Academy"></a>
       </div>
-
     </footer>
 
   </div>

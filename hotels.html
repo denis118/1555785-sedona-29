@@ -1,42 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
-  <body>
+
+  <body class="pageBody">
 
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
 
-    <div class="generalContainer secondPage">
+    <div class="mainContainer innerPage">
 
-      <header>
-
-        <a>
-          <img class="logo" src="img/logo/logo.svg" width="138" height="70" alt="Логотип сайта">
-        </a>
-
-        <nav>
-          <ul class="generalNavigationList">
-            <li>
-              <a href="blank.html">Информация</a>
-            </li>
-            <li>
-              <a href="blank.html">Фото и видео</a>
-            </li>
-            <li>
-              <a href="blank.html">Карта штата</a>
-            </li>
-            <li>
-              <a href="hotels.html">Гостиницы</a>
-            </li>
+      <header class="mainHeader">
+        <nav class="mainNavigation">
+          <a href="index.html"><img class="mainHeaderLogo" src="img/logo/logo.svg" width="138" height="70" alt="Логотип сайта"></a>
+          <ul class="mainNavigationList">
+            <li class="mainNavigationListItem"><a class="link" href="blank.html">Информация</a></li>
+            <li class="mainNavigationListItem"><a class="link" href="blank.html">Фото и видео</a></li>
+            <li class="mainNavigationListItem"><a class="link" href="blank.html">Карта штата</a></li>
+            <li class="mainNavigationListItem"><a class="link" href="">Гостиницы</a></li>
           </ul>
         </nav>
-
       </header>
 
       <main>
-
         <h1 class="visuallyHidden">Гостиницы Седоны. Подходящие предложения</h1>
 
         <section>
@@ -46,56 +37,44 @@
 
         <section>
           <h2 class="visuallyHidden">Результаты поиска</h2>
-          <div>
-            <div>
-                <div>
-                  <span>Найдено:</span>
-                  <span>3</span>
+
+          <div class="range">
+            <div class="sortingElementsBox">
+                <div class="filteredResults">
+                  <span class="caption">Найдено:</span>
+                  <span class="caption">3</span>
                 </div>
-                <div>
-                  <p>Сортировка:</p>
-                  <ul>
-                    <li>
-                      <a href="blank.html" target="_parent">По цене</a>
-                    </li>
-                    <li>
-                      <a href="blank.html" target="_parent">По типу</a>
-                    </li>
-                    <li>
-                      <a href="blank.html" target="_parent">По рейтингу</a>
-                    </li>
+                <div class="sortingInterface">
+                  <p class="text">Сортировка:</p>
+                  <ul class="sortingList">
+                    <li class="sortingListItem"><a class="link text sortingElement" href="blank.html">По цене</a></li>
+                    <li class="sortingListItem"><a class="link text sortingElement" href="blank.html">По типу</a></li>
+                    <li class="sortingListItem"><a class="link text sortingElement" href="blank.html">По рейтингу</a></li>
                   </ul>
                 </div>
             </div>
-            <div>
-              <button name="up"></button>
-              <button name="down"></button>
+            <div class="upDownButtonsBox">
+              <button class="button" name="up"></button>
+              <button class="button" name="down"></button>
             </div>
           </div>
-          <div>
-            <ul>
-              <li>
+
+          <div class="proposedHotelsBox">
+            <ul class="proposedHotelList">
+              <li class="proposedHotelListItem">
                 <div class="proposedHotel">
-                  <a href="hotels/amaraResort&Spa.html">
-                    <img src="img/hotels/amaraResort&Spa.png" width="135" height="90" alt="Амара Резорт эн Спа">
+                  <a class="link" href="hotels/amaraResort&Spa.html">
+                    <img class="viewOfproposedHotel" src="img/hotels/amaraResort&Spa.png" width="135" height="90" alt="Амара Резорт эн Спа">
                   </a>
-                  <div>
-                    <h3>
-                      <a href="hotels/amaraResort&Spa.html">
-                        Amara Resort & Spa
-                      </a>
-                    </h3>
-                    <div>
-                      <span>Гостиница</span>
-                      <span>От 4000 Р.</span>
+                  <div class="infoBox">
+                    <h3><a class="link caption hotelName" href="hotels/amaraResort&Spa.html">Amara Resort & Spa</a></h3>
+                    <div class="infoTextContent">
+                      <span class="text">Гостиница</span>
+                      <span class="text">От 4000 Р.</span>
                     </div>
-                    <div>
-                      <a href="hotels/amaraResort&Spa.html">
-                        Подробнее
-                      </a>
-                      <a href="hotels/amaraResort&Spa.html">
-                        Забронировать
-                      </a>
+                    <div class="buttonBox">
+                      <a class="link button text details" href="hotels/amaraResort&Spa.html">Подробнее</a>
+                      <a class="link button text booking" href="hotels/amaraResort&Spa.html">Забронировать</a>
                     </div>
                   </div>
                 </div>
@@ -108,33 +87,26 @@
                     <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
                   </div>
                   <div class="numberOfPoints">
-                    <span>Рейтинг:</span>
-                    <span>8.5</span>
+                    <span class="text">Рейтинг:</span>
+                    <span class="text">8.5</span>
                   </div>
                 </div>
               </li>
-              <li>
+
+              <li class="proposedHotelListItem">
                 <div class="proposedHotel">
-                  <a href="hotels/desertQuailInn.html">
-                    <img src="img/hotels/desertQuailInn.png" width="135" height="90" alt="Дэзёт Квэил Ин">
+                  <a class="link" href="hotels/desertQuailInn.html">
+                    <img class="viewOfproposedHotel" src="img/hotels/desertQuailInn.png" width="135" height="90" alt="Дэзёт Квэил Ин">
                   </a>
-                  <div>
-                    <h3>
-                      <a href="hotels/desertQuailInn.html">
-                        Desert Quail Inn
-                      </a>
-                    </h3>
-                    <div>
-                      <span>Мотель</span>
-                      <span>От 3000 Р.</span>
+                  <div class="infoBox">
+                    <h3><a class="link caption hotelName" href="hotels/desertQuailInn.html">Desert Quail Inn</a></h3>
+                    <div class="infoTextContent">
+                      <span class="text">Мотель</span>
+                      <span class="text">От 3000 Р.</span>
                     </div>
-                    <div>
-                      <a href="hotels/desertQuailInn.html">
-                        Подробнее
-                      </a>
-                      <a href="hotels/amaraResort&Spa.html">
-                        Забронировать
-                      </a>
+                    <div class="buttonBox">
+                      <a class="link button text details" href="hotels/desertQuailInn.html">Подробнее</a>
+                      <a class="link button text booking" href="hotels/amaraResort&Spa.html">Забронировать</a>
                     </div>
                   </div>
                 </div>
@@ -145,33 +117,26 @@
                     <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
                   </div>
                   <div class="numberOfPoints">
-                    <span>Рейтинг:</span>
-                    <span>8.9</span>
+                    <span class="text">Рейтинг:</span>
+                    <span class="text">8.9</span>
                   </div>
                 </div>
               </li>
-              <li>
+
+              <li class="proposedHotelListItem">
                 <div class="proposedHotel">
-                  <a href="hotels/villasAtPocoDiablo.html">
-                    <img src="img/hotels/villasAtPocoDiablo.png" width="135" height="90" alt="Вилла Эт Поко Диабло">
+                  <a class="link" href="hotels/villasAtPocoDiablo.html">
+                    <img class="viewOfproposedHotel" src="img/hotels/villasAtPocoDiablo.png" width="135" height="90" alt="Вилла Эт Поко Диабло">
                   </a>
-                  <div>
-                    <h3>
-                      <a href="hotels/villasAtPocoDiablo.html">
-                        Villas at Poco Diablo
-                      </a>
-                    </h3>
-                    <div>
-                      <span>Апартаменты</span>
-                      <span>От 2000 Р.</span>
+                  <div class="infoBox">
+                    <h3><a class="link caption hotelName" href="hotels/villasAtPocoDiablo.html">Villas at Poco Diablo</a></h3>
+                    <div class="infoTextContent">
+                      <span class="text">Апартаменты</span>
+                      <span class="text">От 2000 Р.</span>
                     </div>
-                    <div>
-                      <a href="hotels/villasAtPocoDiablo.html">
-                        Подробнее
-                      </a>
-                      <a href="hotels/amaraResort&Spa.html">
-                        Забронировать
-                      </a>
+                    <div class="buttonBox">
+                      <a class="link button text details" href="hotels/villasAtPocoDiablo.html">Подробнее</a>
+                      <a class="link button text booking" href="hotels/amaraResort&Spa.html">Забронировать</a>
                     </div>
                   </div>
                 </div>
@@ -181,8 +146,8 @@
                     <img src="https://via.placeholder.com/18x17" width="18" height="17" alt="Иконка звезды">
                   </div>
                   <div class="numberOfPoints">
-                    <span>Рейтинг:</span>
-                    <span>9.2</span>
+                    <span class="text">Рейтинг:</span>
+                    <span class="text">9.2</span>
                   </div>
                 </div>
               </li>
@@ -191,36 +156,20 @@
         </section>
       </main>
 
-      <footer>
-
-        <div>
-          <p>
-            #visitSEDONA
-          </p>
-          <p>
-            ТЕЛ:<a href="tel:+74956660166"> +7(495) 666-01-66</a>
-          </p>
+      <footer class="footer">
+        <div class="contactsAndCopyright">
+          <p class="caption">#visitSEDONA</p>
+          <p class="caption">ТЕЛ:<a class="link contactPhone" href="tel:+74956660166"> +7(495) 666-01-66</a></p>
         </div>
-        <div>
-          <a href="#">
-            <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Твиттер">
-          </a>
-          <a href="#">
-            <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Фейсбук">
-          </a>
-          <a href="#">
-            <img src="https://via.placeholder.com/46x48" width="46" height="48" alt="Ютуб">
-          </a>
+        <div class="contactsAndCopyright">
+          <a class="button social" href="#"><img class="icon social" src="https://via.placeholder.com/46x48" width="46" height="48" alt="Твиттер"></a>
+          <a class="button social" href="#"><img class="icon social" src="https://via.placeholder.com/46x48" width="46" height="48" alt="Фейсбук"></a>
+          <a class="button social" href="#"><img class="icon social" src="https://via.placeholder.com/46x48" width="46" height="48" alt="Ютуб"></a>
         </div>
-        <div>
-          <span>
-            Website by
-          </span>
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="https://via.placeholder.com/100x48" width="100" height="48" alt="Логотип HTML Academy">
-          </a>
+        <div class="contactsAndCopyright">
+          <span class="websiteBy">Website by</span>
+          <a class="link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="htmlAcademyLogotype" src="https://via.placeholder.com/100x48" width="100" height="48" alt="Логотип HTML Academy"></a>
         </div>
-
       </footer>
 
     </div>
