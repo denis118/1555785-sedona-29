@@ -1,14 +1,16 @@
 /*****fonts*****/
 
+
 /* pt-sans-regular - latin_cyrillic */
 
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'), url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff');
-  /* Modern Browsers */
+  src: local('PT Sans'), local('PTSans-Regular'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff'); /* Modern Browsers */
+
   font-display: swap;
 }
 
@@ -19,11 +21,13 @@
   font-style: normal;
   font-weight: 700;
   src: local('PT Sans'), local('PTSans');
-  src: local('PT Sans Bold'), local('PTSans-Bold'), url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff');
-  /* Modern Browsers */
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff'); /* Modern Browsers */
+
   font-display: swap;
 }
+
 
 :root {
   --basicWhite: #FFFFFF;
@@ -57,10 +61,12 @@
   --devilBridge: #DBA68D;
 }
 
+
 /*****body*****/
 
 .pageBody {
   background-color: var(--extraLightGray);
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -69,11 +75,11 @@
   text-transform: uppercase;
 }
 
+
 /*****mainContainer*****/
 
 .mainContainer {
   width: 1200px;
-  height: 2762px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--basicWhite);
@@ -83,7 +89,7 @@
 /* .mainContainer.mainPage {
   display: grid;
   grid-template-columns: repeat(3, 400px);
-  grid-template-rows: 56px 2586px 120px;
+  grid-template-rows: ???????????????????;
 } */
 
 .visuallyHidden {
@@ -94,19 +100,21 @@
   margin: -1px;
 }
 
-.link,
-.hotelSearch,
-.button.social {
+.link {
   text-decoration: none;
 }
 
-.mainNavigationList,
+.list {
+  list-style: none;
+}
+
+/* .mainNavigationList,
 .advantagesList,
 .trueCityList,
 .sortingList,
 .proposedHotelList {
   list-style: none;
-}
+} */
 
 .caption {
   color: var(--basicBlack);
@@ -115,38 +123,36 @@
   line-height: 26px;
 }
 
+
 /*****header*****/
 
 .mainHeader {
   background-color: inherit;
 }
 
-.mainNavigationListItem>.link {
+.mainNavigationListItem > .link {
   color: var(--basicBlack);
   font-weight: bold;
   line-height: 26px;
 }
 
-.mainNavigationListItem>.link:link {
-  color: var(--basicBlack);
-}
-
-.mainNavigationListItem>.link:visited {
+.mainNavigationListItem > .link:visited {
   color: var(--regularBrown);
 }
 
-.mainNavigationListItem>.link:focus {
-  color: var(--basicBlack);
+.mainNavigationListItem > .link:focus {
+  color: var(--regularBrown);
 }
 
-.mainNavigationListItem>.link:hover {
+.mainNavigationListItem > .link:hover {
   color: var(--regularBlue);
 }
 
-.mainNavigationListItem>.link:active {
+.mainNavigationListItem > .link:active {
   mix-blend-mode: normal;
   opacity: 0.3;
 }
+
 
 /*****main*****/
 
@@ -198,11 +204,11 @@
   background-color: var(--specialDoubleLightGray);
 }
 
-.trueCityListItem>.text,
+.trueCityListItem > .text,
 .advantagesItem:nth-child(3) > .text,
 .advantagesItem:nth-child(4) > .text,
 .advantagesItem:nth-child(5) > .text,
-.infoTextContent>.text {
+.infoTextContent > .text {
   color: var(--darkGray);
 }
 
@@ -233,7 +239,6 @@
 
 .button.hotelSearch:active {
   background-color: var(--extraDarkBrown);
-  /* color: var(--lightBrown); */
   color: var(--basicOpacityWhite);
 }
 
@@ -242,6 +247,7 @@
 .map {
   background-color: var(--map);
 }
+
 
 /*****footer*****/
 
@@ -288,7 +294,9 @@
   color: var(--specialLightGray);
 }
 
+
 /*****main inner page*****/
+
 .sortingInterface {
   font-size: 12px;
   line-height: 18px;
