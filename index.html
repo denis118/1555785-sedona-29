@@ -17,7 +17,7 @@
 
     <header class="mainHeader">
       <nav class="mainNavigation">
-        <a><img class="mainHeaderLogo" src="img/logo/logo.svg" width="138" height="70" alt="Логотип сайта"></a>
+        <a><img class="mainHeaderLogo" src="img/content/svg/logo/logo.svg" width="138" height="70" alt="Логотип сайта"></a>
         <ul class="list mainNavigationList">
           <li class="mainNavigationListItem"><a class="link" href="blank.html">Информация</a></li>
           <li class="mainNavigationListItem"><a class="link" href="blank.html">Фото и видео</a></li>
@@ -32,14 +32,9 @@
 
       <section class="greeting">
         <h2 class="visuallyHidden">Приветствие</h2>
-        <p>Welcome to the gargeous Sedona</p>
-        <p>"Because the Grand Canyon sucks!"</p>
+        <img class="sedonaNature" src="img/content/jpg/background/sedonaNature/sedonaNature.jpg" width="1200" height="509" alt="Природа Седоны">
+        <img class="welcomeToSedonaText" src="img/content/svg/welcome/welcome.svg" width="456.65" height="350.88" alt="Добро пожаловать в Седону">
       </section>
-      <!-- <section class="greeting">
-        <h2 class="visuallyHidden">Приветствие</h2>
-        <img class="sedonaNature" src="https://via.placeholder.com/1200x509" width="1200" height="509" alt="Природа Седоны">
-        <img class="welcomeToSedonaText" src="https://via.placeholder.com/456x350" width="456.65" height="350.88" alt="Добро пожаловать в Седону">
-      </section> -->
       <!-- Белую маску добавить через CSS -->
 
       <section class="advantages">
@@ -51,8 +46,7 @@
             <div class="trueCityMainContent">
               <p class="subject ">Настоящий городок</p>
               <p class="text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-              <img class="sedonaBuildingPhoto" src="https://via.placeholder.com/800x256" width="800" height="256"
-                alt="Вид одного из зданий города">
+              <img class="sedonaBuildingPhoto" src="img/content/jpg/sedonaBuildingPhoto/sedonaBuildingPhoto.jpg" width="800" height="256" alt="Вид одного из зданий города">
             </div>
             <ul class="list trueCityList">
               <li class="trueCityListItem">
@@ -72,8 +66,8 @@
           <li class="advantagesItem">
             <p class="subject">Там есть мост Дьявола</p>
             <p class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <img class="devilBridgePhoto" src="https://via.placeholder.com/800x256" width="800" height="256"
-              alt="Мост Дьявола">
+            <img class="devilBridgePhoto" src="img/content/jpg/devilBridgePhoto/devilBridgePhoto.jpg" width="800" height="256"
+              alt="Горное образование, одна из достопримечательностей Седоны, под названием 'Мост Дьявола'">
           </li>
           <li class="advantagesItem">
             <p class="subject">Небольшая площадь</p>
@@ -101,8 +95,8 @@
 
       <section class="map">
         <h2 class="visuallyHidden">Седона на карте</h2>
-        <img class="mapImage" src="https://via.placeholder.com/1199x594" width="1199" height="594"
-          alt="Седона на карте">
+        <img class="mapImage" src="img/content/jpg/mapImage/map.jpg" width="1199" height="594"
+          alt="Город Седона находится в штате Аризона Соединённых Штатов Америки">
       </section>
     </main>
 
@@ -112,21 +106,39 @@
         <p class="caption">ТЕЛ:<a class="link contactPhone" href="tel:+74956660166"> +7(495) 666-01-66</a></p>
       </div>
       <div class="contactsAndCopyright">
-        <a class="link button social" href="#"><img class="icon social" src="https://via.placeholder.com/46x48" width="46"
-            height="48" alt="Твиттер"></a>
-        <a class="link button social" href="#"><img class="icon social" src="https://via.placeholder.com/46x48" width="46"
-            height="48" alt="Фейсбук"></a>
-        <a class="link button social" href="#"><img class="icon social" src="https://via.placeholder.com/46x48" width="46"
-            height="48" alt="Ютуб"></a>
+        <a class="link button social twitter" href="#"><span class="visuallyHidden">Ссылка на твиттер-аккаунт</span></a>
+        <a class="link button social facebook" href="#"><span class="visuallyHidden">Ссылка на аккаунт в Фэйсбук</span></a>
+        <a class="link button social youtube" href="#"><span class="visuallyHidden">Ссылка на Ютуб-канал</span></a>
       </div>
       <div class="contactsAndCopyright">
         <span class="websiteBy">Website by</span>
-        <a class="link htmlAcademy" href="https://htmlacademy.ru/intensive/htmlcss"><img class="htmlAcademyLogotype"
-            src="https://via.placeholder.com/100x48" width="100" height="48" alt="Логотип HTML Academy"></a>
+        <a class="link htmlAcademy" href="https://htmlacademy.ru/intensive/htmlcss"><img id="htmlAcademyLogotype" src="img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype.svg" width="115" height="41" alt="Логотип HTML Academy"></a>
       </div>
     </footer>
 
   </div>
+
+  <script>
+    function htmlAcadLogoMouseOver() {
+      let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
+      htmlAcademyLogotype.src = "img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype_hover.svg";
+    }
+
+    function htmlAcadLogoMouseDown() {
+      let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
+      htmlAcademyLogotype.src = "img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype_active.svg";
+    }
+
+    function htmlAcadLogoMouseOut() {
+      let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
+      htmlAcademyLogotype.src = "img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype.svg";
+    }
+
+    let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
+    htmlAcademyLogotype.addEventListener( "mouseover", htmlAcadLogoMouseOver );
+    htmlAcademyLogotype.addEventListener( "mousedown", htmlAcadLogoMouseDown );
+    htmlAcademyLogotype.addEventListener( "mouseout", htmlAcadLogoMouseOut );
+  </script>
 
 </body>
 

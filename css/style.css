@@ -57,6 +57,7 @@
   --specialDoubleLightGray: #EEEEEE;
 
   /**backgroundColors**/
+  --sedonaNature: #DBE9F1;
   --map: #F2F1EF;
   --devilBridge: #DBA68D;
 }
@@ -134,21 +135,28 @@
   color: var(--basicBlack);
   font-weight: bold;
   line-height: 26px;
+  opacity: 1;
+
 }
 
-.mainNavigationListItem > .link:visited {
+/* .mainNavigationListItem > .link:visited {
   color: var(--regularBrown);
-}
+  opacity: 1;
+} */
 
 .mainNavigationListItem > .link:focus {
   color: var(--regularBrown);
+  opacity: 1;
 }
 
 .mainNavigationListItem > .link:hover {
   color: var(--regularBlue);
+  opacity: 1;
+
 }
 
 .mainNavigationListItem > .link:active {
+  color: var(--regularBrown);
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -163,7 +171,7 @@
 /*---------*/
 
 .greeting {
-  background-color: var(--regularBlue);
+  background-color: var(--sedonaNature);
 }
 
 /*---------*/
@@ -260,11 +268,58 @@
 }
 
 .button.social {
+  /* background-color: var(--regularBlue); */
+  /* color: var(--basicWhite); */
+
+  display: block;
+  width: 46px;
+  height: 48px;
+
   background-color: var(--regularBlue);
-  color: var(--basicWhite);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
-.button.social:hover {
+.twitter {
+  background-image: url('../img/decor/svg/iconsSocial/twitter_w17px_h17px.svg');
+}
+
+.twitter:hover {
+  background-color: var(--darkBlue);
+}
+
+.twitter:active {
+  background-color: var(--extraDarkBlue);
+  background-image: url('../img/decor/svg/iconsSocial/twitter_opacityImitation_w17px_h17px.svg');
+}
+
+.facebook {
+  background-image: url('../img/decor/svg/iconsSocial/fb-icon_w12px_h22px.svg');
+}
+
+.facebook:hover {
+  background-color: var(--darkBlue);
+}
+
+.facebook:active {
+  background-color: var(--extraDarkBlue);
+  background-image: url('../img/decor/svg/iconsSocial/fb-icon_opacityImitation_w12px_h22px.svg');
+}
+
+.youtube {
+  background-image: url('../img/decor/svg/iconsSocial/youtube_w20px_h16px.svg');
+}
+
+.youtube:hover {
+  background-color: var(--darkBlue);
+}
+
+.youtube:active {
+  background-color: var(--extraDarkBlue);
+  background-image: url('../img/decor/svg/iconsSocial/youtube_opacityImitation_w20px_h16px.svg');
+}
+
+/* .button.social:hover {
   background-color: var(--darkBlue);
   color: var(--basicWhite);
 }
@@ -276,23 +331,12 @@
 
 .icon.social {
   background-color: var(--regularBlue);
-}
+} */
 
 .websiteBy {
   line-height: 26px;
 }
 
-.link.htmlAcademy {
-  color: var(--lightBlack);
-}
-
-.link.htmlAcademy:hover {
-  color: var(--regularBlue);
-}
-
-.link.htmlAcademy:active {
-  color: var(--specialLightGray);
-}
 
 
 /*****main inner page*****/
@@ -310,6 +354,11 @@
   border-bottom: 1px dotted var(--regularBlue);
 }
 
+.sortingElement:focus {
+  color: var(--regularBlue);
+  border: none;
+}
+
 .sortingElement:hover {
   color: var(--regularBlue);
 }
@@ -320,7 +369,14 @@
   opacity: 1;
 }
 
-.upDownButtonsBox > .button {
+.button[name="up"],
+.button[name="down"] {
+  background-color: var(--basicWhite);
+  border: none;
+  outline: none;
+}
+
+/* .upDownButtonsBox > .button {
   background-color: var(--tripleLightGray);
   border: none;
   outline: none;
@@ -336,7 +392,7 @@
   background-color: var(--regularBlue);
   border: none;
   outline: none;
-}
+} */
 
 .hotelName:hover {
   color: var(--regularBlue);
