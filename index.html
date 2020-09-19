@@ -119,25 +119,25 @@
   </div>
 
   <script>
-    function htmlAcadLogoMouseOver() {
+    function htmlAcadLogoBlue() {
       let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
       htmlAcademyLogotype.src = "img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype_hover.svg";
     }
 
-    function htmlAcadLogoMouseDown() {
+    function htmlAcadLogoGray() {
       let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
       htmlAcademyLogotype.src = "img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype_active.svg";
     }
 
-    function htmlAcadLogoMouseOut() {
+    function htmlAcadLogoBlack() {
       let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
       htmlAcademyLogotype.src = "img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype.svg";
     }
 
     let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
-    htmlAcademyLogotype.addEventListener( "mouseover", htmlAcadLogoMouseOver );
-    htmlAcademyLogotype.addEventListener( "mousedown", htmlAcadLogoMouseDown );
-    htmlAcademyLogotype.addEventListener( "mouseout", htmlAcadLogoMouseOut );
+    htmlAcademyLogotype.addEventListener( "mouseover", htmlAcadLogoBlue );
+    htmlAcademyLogotype.addEventListener( "mousedown", htmlAcadLogoGray );
+    htmlAcademyLogotype.addEventListener( "mouseout", htmlAcadLogoBlack );
   </script>
 
 </body>
