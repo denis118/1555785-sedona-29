@@ -139,11 +139,6 @@
 
 }
 
-/* .mainNavigationListItem > .link:visited {
-  color: var(--regularBrown);
-  opacity: 1;
-} */
-
 .mainNavigationListItem > .link:focus {
   color: var(--regularBrown);
   opacity: 1;
@@ -268,9 +263,6 @@
 }
 
 .button.social {
-  /* background-color: var(--regularBlue); */
-  /* color: var(--basicWhite); */
-
   display: block;
   width: 46px;
   height: 48px;
@@ -281,7 +273,7 @@
 }
 
 .twitter {
-  background-image: url('../img/decor/svg/iconsSocial/twitter_w17px_h17px.svg');
+  background-image: url('../img/decor/svg/icons_social/twitter_w17px_h17px.svg');
 }
 
 .twitter:hover {
@@ -290,11 +282,11 @@
 
 .twitter:active {
   background-color: var(--extraDarkBlue);
-  background-image: url('../img/decor/svg/iconsSocial/twitter_opacityImitation_w17px_h17px.svg');
+  background-image: url('../img/decor/svg/icons_social/twitter_opacity_imitation_w17px_h17px.svg');
 }
 
 .facebook {
-  background-image: url('../img/decor/svg/iconsSocial/fb-icon_w12px_h22px.svg');
+  background-image: url('../img/decor/svg/icons_social/fb-icon_w12px_h22px.svg');
 }
 
 .facebook:hover {
@@ -303,11 +295,11 @@
 
 .facebook:active {
   background-color: var(--extraDarkBlue);
-  background-image: url('../img/decor/svg/iconsSocial/fb-icon_opacityImitation_w12px_h22px.svg');
+  background-image: url('../img/decor/svg/icons_social/fb-icon_opacity_imitation_w12px_h22px.svg');
 }
 
 .youtube {
-  background-image: url('../img/decor/svg/iconsSocial/youtube_w20px_h16px.svg');
+  background-image: url('../img/decor/svg/icons_social/youtube_w20px_h16px.svg');
 }
 
 .youtube:hover {
@@ -316,25 +308,35 @@
 
 .youtube:active {
   background-color: var(--extraDarkBlue);
-  background-image: url('../img/decor/svg/iconsSocial/youtube_opacityImitation_w20px_h16px.svg');
+  background-image: url('../img/decor/svg/icons_social/youtube_opacity_imitation_w20px_h16px.svg');
 }
-
-/* .button.social:hover {
-  background-color: var(--darkBlue);
-  color: var(--basicWhite);
-}
-
-.button.social:active {
-  background-color: var(--extraDarkBlue);
-  color: var(--lightBlue);
-}
-
-.icon.social {
-  background-color: var(--regularBlue);
-} */
 
 .websiteBy {
   line-height: 26px;
+}
+
+.htmlAcademyIntensive .hoverState {
+  display: none;
+}
+
+.htmlAcademyIntensive .activeState {
+  display: none;
+}
+
+.htmlAcademyIntensive:hover .defaultState {
+  display: none;
+}
+
+.htmlAcademyIntensive:hover .hoverState {
+  display: inline;
+}
+
+.htmlAcademyIntensive:active .hoverState {
+  display: none;
+}
+
+.htmlAcademyIntensive:active .activeState {
+  display: inline;
 }
 
 
@@ -369,6 +371,8 @@
   opacity: 1;
 }
 
+
+
 .button[name="up"],
 .button[name="down"] {
   background-color: var(--basicWhite);
@@ -376,23 +380,81 @@
   outline: none;
 }
 
-/* .upDownButtonsBox > .button {
-  background-color: var(--tripleLightGray);
-  border: none;
-  outline: none;
+.button[name="up"] .hoverState {
+  display: none;
 }
 
-.upDownButtonsBox > .button:hover {
-  background-color: var(--basicBlack);
-  border: none;
-  outline: none;
+.button[name="up"] .activeState {
+  display: none;
 }
 
-.upDownButtonsBox > .button:active {
-  background-color: var(--regularBlue);
-  border: none;
-  outline: none;
-} */
+.button[name="up"]:focus .defaultState {
+  display: none;
+}
+
+.button[name="up"]:focus .focusState {
+  display: inline;
+}
+
+.button[name="up"]:hover .focusState {
+  display: none;
+}
+
+.button[name="up"]:hover .defaultState {
+  display: none;
+}
+
+.button[name="up"]:hover .hoverState {
+  display: inline;
+}
+
+.button[name="up"]:active .hoverState {
+  display: none;
+}
+
+.button[name="up"]:active .activeState {
+  display: inline;
+}
+
+
+
+.button[name="down"] .hoverState {
+  display: none;
+}
+
+.button[name="down"] .activeState {
+  display: none;
+}
+
+.button[name="down"]:focus .defaultState {
+  display: none;
+}
+
+.button[name="down"]:focus .focusState {
+  display: inline;
+}
+
+.button[name="down"]:hover .focusState {
+  display: none;
+}
+
+.button[name="down"]:hover .defaultState {
+  display: none;
+}
+
+.button[name="down"]:hover .hoverState {
+  display: inline;
+}
+
+.button[name="down"]:active .hoverState {
+  display: none;
+}
+
+.button[name="down"]:active .activeState {
+  display: inline;
+}
+
+
 
 .hotelName:hover {
   color: var(--regularBlue);
@@ -403,6 +465,8 @@
   mix-blend-mode: normal;
   opacity: 0.3;
 }
+
+
 
 .details {
   font-weight: bold;
@@ -419,6 +483,8 @@
   color: var(--basicOpacityWhite);
 }
 
+
+
 .booking {
   font-weight: bold;
   color: var(--basicWhite);
@@ -433,6 +499,8 @@
   color: var(--basicOpacityWhite);
   background-color: var(--extraDarkBrown);
 }
+
+
 
 .numberOfPoints {
   background-color: var(--extraLightGray);

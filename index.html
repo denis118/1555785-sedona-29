@@ -32,8 +32,8 @@
 
       <section class="greeting">
         <h2 class="visuallyHidden">Приветствие</h2>
-        <img class="sedonaNature" src="img/content/jpg/background/sedonaNature/sedonaNature.jpg" width="1200" height="509" alt="Природа Седоны">
-        <img class="welcomeToSedonaText" src="img/content/svg/welcome/welcome.svg" width="456.65" height="350.88" alt="Добро пожаловать в Седону">
+        <img class="sedonaNature" src="img/content/jpg/background/sedona_nature/sedona_nature.jpg" width="1200" height="509" alt="Природа Седоны">
+        <img class="welcomeToSedonaText" src="img/content/svg/welcome/welcome.svg" width="457" height="351" alt="Добро пожаловать в Седону">
       </section>
       <!-- Белую маску добавить через CSS -->
 
@@ -46,7 +46,7 @@
             <div class="trueCityMainContent">
               <p class="subject ">Настоящий городок</p>
               <p class="text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-              <img class="sedonaBuildingPhoto" src="img/content/jpg/sedonaBuildingPhoto/sedonaBuildingPhoto.jpg" width="800" height="256" alt="Вид одного из зданий города">
+              <img class="sedonaBuildingPhoto" src="img/content/jpg/sedona_building_photo/sedona_building_photo.jpg" width="800" height="256" alt="Вид одного из зданий города">
             </div>
             <ul class="list trueCityList">
               <li class="trueCityListItem">
@@ -66,7 +66,7 @@
           <li class="advantagesItem">
             <p class="subject">Там есть мост Дьявола</p>
             <p class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <img class="devilBridgePhoto" src="img/content/jpg/devilBridgePhoto/devilBridgePhoto.jpg" width="800" height="256"
+            <img class="devilBridgePhoto" src="img/content/jpg/devil_bridge_photo/devil_bridge_photo.jpg" width="800" height="256"
               alt="Горное образование, одна из достопримечательностей Седоны, под названием 'Мост Дьявола'">
           </li>
           <li class="advantagesItem">
@@ -95,7 +95,7 @@
 
       <section class="map">
         <h2 class="visuallyHidden">Седона на карте</h2>
-        <img class="mapImage" src="img/content/jpg/mapImage/map.jpg" width="1199" height="594"
+        <img class="mapImage" src="img/content/jpg/map_image/map.jpg" width="1199" height="594"
           alt="Город Седона находится в штате Аризона Соединённых Штатов Америки">
       </section>
     </main>
@@ -112,33 +112,15 @@
       </div>
       <div class="contactsAndCopyright">
         <span class="websiteBy">Website by</span>
-        <a class="link htmlAcademy" href="https://htmlacademy.ru/intensive/htmlcss"><img id="htmlAcademyLogotype" src="img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype.svg" width="115" height="41" alt="Логотип HTML Academy"></a>
+        <a class="link htmlAcademyIntensive" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img class="defaultState" src="img/content/svg/html_academy_logotype/html_academy_logotype.svg" width="115" height="41" alt="Логотип HTML Academy">
+          <img class="hoverState" src="img/content/svg/html_academy_logotype/html_academy_logotype_hover.svg" width="115" height="41" alt="Логотип HTML Academy">
+          <img class="activeState" src="img/content/svg/html_academy_logotype/html_academy_logotype_active.svg" width="115" height="41" alt="Логотип HTML Academy">
+        </a>
       </div>
     </footer>
 
   </div>
-
-  <script>
-    function htmlAcadLogoBlue() {
-      let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
-      htmlAcademyLogotype.src = "img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype_hover.svg";
-    }
-
-    function htmlAcadLogoGray() {
-      let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
-      htmlAcademyLogotype.src = "img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype_active.svg";
-    }
-
-    function htmlAcadLogoBlack() {
-      let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
-      htmlAcademyLogotype.src = "img/content/svg/htmlAcademyLogotype/htmlAcademyLogotype.svg";
-    }
-
-    let htmlAcademyLogotype = document.getElementById( 'htmlAcademyLogotype' );
-    htmlAcademyLogotype.addEventListener( "mouseover", htmlAcadLogoBlue );
-    htmlAcademyLogotype.addEventListener( "mousedown", htmlAcadLogoGray );
-    htmlAcademyLogotype.addEventListener( "mouseout", htmlAcadLogoBlack );
-  </script>
 
 </body>
 
