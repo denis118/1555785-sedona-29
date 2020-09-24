@@ -1,33 +1,3 @@
-/*****fonts*****/
-
-
-/* pt-sans-regular - latin_cyrillic */
-
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'),
-       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff'); /* Modern Browsers */
-
-  font-display: swap;
-}
-
-/* pt-sans-700 - latin_cyrillic */
-
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans'), local('PTSans');
-  src: local('PT Sans Bold'), local('PTSans-Bold'),
-       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff'); /* Modern Browsers */
-
-  font-display: swap;
-}
-
 
 :root {
   --basicWhite: #FFFFFF;
@@ -57,7 +27,7 @@
   --specialDoubleLightGray: #EEEEEE;
 
   /**backgroundColors**/
-  --sedonaNature: #DBE9F1;
+  --sedona-nature: #DBE9F1;
   --map: #F2F1EF;
   --devilBridge: #DBA68D;
 }
@@ -65,8 +35,16 @@
 
 /*****body*****/
 
-.pageBody {
+.page {
+  height: 100%; /*чтобы при нехватке контента подвал прижимался к нижней части страницы*/
+}
+
+.page-body {
   background-color: var(--extraLightGray);
+
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 14px;
@@ -77,23 +55,20 @@
 }
 
 
-/*****mainContainer*****/
+/*****main-container*****/
 
-.mainContainer {
+.main-container {
   width: 1200px;
-  margin-left: auto;
+  min-height: 100%;
+
   margin-right: auto;
+  margin-left: auto;
+
   background-color: var(--basicWhite);
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
-/* .mainContainer.mainPage {
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  grid-template-rows: ???????????????????;
-} */
-
-.visuallyHidden {
+.visually-hidden {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   width: 1px;
@@ -107,15 +82,9 @@
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
-/* .mainNavigationList,
-.advantagesList,
-.trueCityList,
-.sortingList,
-.proposedHotelList {
-  list-style: none;
-} */
 
 .caption {
   color: var(--basicBlack);
@@ -125,36 +94,804 @@
 }
 
 
+
+/*****grid*****/
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas:
+                      "header"
+                      "main"
+                      "footer";
+}
+
+.main-header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+
+
+.main-header {
+  display: flex;
+
+  position: relative;
+}
+
+.main-header-logo {
+  width: 138px;
+  height: 70px;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: calc(-138px/2);
+}
+
+.main-navigation {
+  flex-grow: 1;
+
+  display: flex;
+}
+
+.main-navigation-list {
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-navigation-list-item {
+  flex-basis: 100px;
+  flex-grow: 1;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  display: flex;
+}
+
+.info-item,
+.media-item {
+  justify-content: flex-start;
+}
+
+.state-map-item,
+.hotels-item {
+  justify-content: flex-end;
+}
+
+.main-navigation-list-item > .link {
+  display: block;
+}
+
+.info-item > .link {
+  margin-left: 72px;
+}
+
+.state-map-item > .link {
+  margin-right: -1px;
+}
+
+.hotels-item > .link {
+  margin-right: 72px;
+}
+
+
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, min-content) 473px;
+  grid-template-areas:
+                      "greeting"
+                      "outstanding-qualities"
+                      "sedona-hotels"
+                      "map";
+  overflow: hidden;
+}
+
+.greeting {
+  grid-area: greeting;
+}
+
+.outstanding-qualities {
+  grid-area: outstanding-qualities;
+}
+
+.sedona-hotels {
+  grid-area: sedona-hotels;
+}
+
+.map {
+  grid-area: map;
+}
+
+
+
+.outstanding-qualities {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-areas:
+                      "why-sedona"
+                      "outstanding-qualities-list";
+  margin: 0;
+  padding: 0;
+}
+
+.why-sedona {
+  grid-area: why-sedona;
+}
+
+.outstanding-qualities-list {
+  grid-area: outstanding-qualities-list;
+}
+
+
+
+.why-sedona {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-areas:
+                      "deserve-more"
+                      "five-reasons-headline";
+  margin: 0;
+  padding: 0;
+}
+
+.deserve-more {
+  grid-area: deserve-more;
+
+  width: 470px;
+  height: 80px;
+
+  padding: 0;
+  margin-top: 42.5px;
+  margin-right: 365px;
+  margin-left: 365px;
+
+  text-align: center;
+}
+
+.five-reasons-headline {
+  grid-area: five-reasons-headline;
+
+  width: 519px;
+  height: auto;
+
+  padding: 0;
+  margin-top: 16.5px;
+  margin-right: 341px;
+  margin-left: 340px;
+  margin-bottom: 51px;
+
+  text-align: center;
+}
+
+
+
+.outstanding-qualities-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas:
+                      "true-city true-city true-city"
+                      "bridge-of-devil bridge-of-devil bridge-of-devil"
+                      "small-area beautiful-road few-tourists";
+  margin: 0;
+  padding: 0;
+}
+
+.true-city {
+  grid-area: true-city;
+}
+
+.bridge-of-devil {
+  grid-area: bridge-of-devil;
+}
+
+.small-area {
+  grid-area: small-area;
+}
+
+.beautiful-road {
+  grid-area: beautiful-road;
+}
+
+.few-tourists {
+  grid-area: few-tourists;
+}
+
+
+
+.true-city {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-areas:
+                      "true-city-main-content"
+                      "true-city-list";
+}
+
+.true-city-main-content {
+  grid-area: true-city-main-content;
+}
+
+.true-city-list {
+  grid-area: true-city-list;
+}
+
+
+
+.true-city-main-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sedona-building-photo {
+  flex-basis: 800px;
+}
+
+.small-city-life {
+  flex-basis: 400px;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.small-city-life::before {
+  content: "-№1-";
+  width: 51px;
+  height: 21px;
+
+  padding: 0;
+  margin-top: 25px;
+  margin-right: 174px;
+  margin-left: 175px;
+  margin-bottom: 23px;
+
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+
+  text-align: center;
+
+  order: 2;
+}
+
+.unfeigned-town {
+  width: 122px;
+  height: 43px;
+
+  padding: 0;
+  margin-top: 47px;
+  margin-right: 139px;
+  margin-left: 139px;
+
+  text-align: center;
+
+  order: 1;
+}
+
+.own-life {
+  width: 297px;
+  height: 43px;
+
+  padding: 0;
+  margin-right: 51px;
+  margin-left: 52px;
+  margin-bottom: 54px;
+
+  text-align: center;
+
+  order: 3;
+}
+
+
+
+.true-city-list {
+  display: flex;
+}
+
+
+
+.housing {
+  flex-basis: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.housing::before {
+  content: '';
+  width: 75px;
+  height: 72px;
+  background-image: url('../img/decor/svg/true_city_list_item_icons/icon-1_w75px_h72px.svg');
+
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+.housing .subject {
+  width: 68px;
+  height: 21px;
+
+  padding: 0;
+  margin-top: 28px;
+  margin-bottom: 25px;
+}
+
+.housing .text {
+  width: 254px;
+  height: 42px;
+
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 82px;
+
+  text-align: center;
+}
+
+
+
+.food {
+  flex-basis: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.food::before {
+  content: '';
+  width: 75px;
+  height: 70px;
+  background-image: url('../img/decor/svg/true_city_list_item_icons/icon-3_w75px_h70px.svg');
+
+  padding: 0;
+  margin-top: 61px;
+  margin-bottom: 0px;
+}
+
+.food .subject {
+  width: 39px;
+  height: 21px;
+
+  padding: 0;
+  margin-top: 29px;
+  margin-bottom: 25px;
+}
+
+.food .text {
+  width: 297px;
+  height: 42px;
+
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 82px;
+
+  text-align: center;
+}
+
+
+
+.souvenirs {
+  flex-basis: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.souvenirs::before {
+  content: '';
+  width: 64px;
+  height: 77px;
+  background-image: url('../img/decor/svg/true_city_list_item_icons/icon-2_w64px_h77px.svg');
+
+  padding: 0;
+  margin-top: 55px;
+  margin-bottom: 0px;
+}
+
+.souvenirs .subject {
+  width: 103px;
+  height: 21px;
+
+  padding: 0;
+  margin-top: 28px;
+  margin-bottom: 25px;
+}
+
+.souvenirs .text {
+  width: 269px;
+  height: 43px;
+
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 81px;
+
+  text-align: center;
+}
+
+
+
+.bridge-of-devil {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.devil-bridge-photo {
+  flex-basis: 800px;
+}
+
+.devil-bridge-sight {
+  flex-basis: 400px;
+  order: 1;
+
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.devil-bridge-sight::before {
+  content: "-№2-";
+  width: 51px;
+  height: 21px;
+
+  padding: 0;
+  margin-top: 25px;
+  margin-right: 174px;
+  margin-left: 175px;
+  margin-bottom: 23px;
+
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+
+  text-align: center;
+
+  order: 2;
+}
+
+.devil-bridge-sight .subject {
+  width: 149px;
+  height: 43px;
+
+  padding: 0;
+  margin-top: 50px;
+  margin-right: 125px;
+  margin-left: 126px;
+
+  text-align: center;
+
+  order: 1;
+}
+
+.devil-bridge-sight .text {
+  width: 301px;
+  height: 43px;
+
+  padding: 0;
+  margin-right: 49px;
+  margin-left: 50px;
+  margin-bottom: 51px;
+
+  text-align: center;
+
+  order: 3;
+}
+
+
+
+.small-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-area::before {
+  content: "-№3-";
+  width: 51px;
+  height: 21px;
+
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 23px;
+
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+
+  text-align: center;
+
+  order: 2;
+}
+
+.small-area .subject {
+  width: 149px;
+  height: 43px;
+
+  padding: 0;
+  margin-top: 47px;
+  margin-bottom: 0;
+
+  text-align: center;
+
+  order: 1;
+}
+
+.small-area .text {
+  width: 207px;
+  height: 43px;
+
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 54px;
+
+  text-align: center;
+
+  order: 3;
+}
+
+
+
+.beautiful-road {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beautiful-road::before {
+  content: "-№4-";
+  width: 51px;
+  height: 21px;
+
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 23px;
+
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+
+  text-align: center;
+
+  order: 2;
+}
+
+.beautiful-road .subject {
+  width: 99px;
+  height: 43px;
+
+  padding: 0;
+  margin-top: 47px;
+  margin-bottom: 0;
+
+  text-align: center;
+
+  order: 1;
+}
+
+.beautiful-road .text {
+  width: 258px;
+  height: 43px;
+
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 54px;
+
+  text-align: center;
+
+  order: 3;
+}
+
+
+
+.few-tourists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.few-tourists::before {
+  content: "-№5-";
+  width: 51px;
+  height: 21px;
+
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 23px;
+
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+
+  text-align: center;
+
+  order: 2;
+}
+
+.few-tourists .subject {
+  width: 98px;
+  height: 43px;
+
+  padding: 0;
+  margin-top: 47px;
+  margin-bottom: 0;
+
+  text-align: center;
+
+  order: 1;
+}
+
+.few-tourists .text {
+  width: 246px;
+  height: 43px;
+
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 54px;
+
+  text-align: center;
+
+  order: 3;
+}
+
+
+
+.sedona-hotels {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-for-hotel-search-text {
+  width: 435px;
+  height: 147px;
+
+  margin-top: 58px;
+  margin-left: 383px;
+
+  text-align: center;
+}
+
+.sedona-hotels .hotel-search {
+  width: 568px;
+  height: 86px;
+
+  margin-left: 316px;
+  margin-bottom: 0;
+
+  text-align: center;
+}
+
+.hotel-search-link-text {
+  display: block;
+  width: 319px;
+  height: 26px;
+
+  padding: 0;
+  margin-top: 30px;
+  margin-right: 124px;
+  margin-left: 125px;
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+
+
+.footer {
+  display: flex;
+}
+
+.contacts-and-copyright {
+  flex-basis: 400px;
+
+  display: grid;
+  align-items: center;
+}
+
+.paragraph-tel {
+  justify-self: start;
+
+  width: 251px;
+  margin-left: 111px;
+  margin-top: 23px;
+  margin-bottom: 36px;
+}
+
+.paragraph-tel > .caption {
+  display: block;
+  text-align: center;
+}
+
+.paragraph-tel > .caption:first-child {
+  margin-bottom: 9px;
+}
+
+
+
+.paragraph-social {
+  justify-self: center;
+
+  margin-top: 36px;
+  margin-bottom: 36px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 6px;
+}
+
+
+
+.paragraph-creators {
+  justify-self: end;
+
+  width: 197px;
+  margin-right: 138px;
+
+  display: flex;
+  align-items: center;
+}
+
+.website-by {
+  margin-right: 8px;
+}
+
+
+
 /*****header*****/
 
-.mainHeader {
+.main-header {
   background-color: inherit;
 }
 
-.mainNavigationListItem > .link {
+.main-navigation-list-item > .link {
   color: var(--basicBlack);
   font-weight: bold;
   line-height: 26px;
-  opacity: 1;
-
 }
 
-.mainNavigationListItem > .link:focus {
+.main-navigation-list-item > .link:focus {
   color: var(--regularBrown);
-  opacity: 1;
 }
 
-.mainNavigationListItem > .link:hover {
+.main-navigation-list-item > .link:hover {
   color: var(--regularBlue);
-  opacity: 1;
-
 }
 
-.mainNavigationListItem > .link:active {
-  color: var(--regularBrown);
+.main-navigation-list-item > .link:active {
+  color: var(--basicBlack);
   mix-blend-mode: normal;
   opacity: 0.3;
 }
+
 
 
 /*****main*****/
@@ -166,7 +903,15 @@
 /*---------*/
 
 .greeting {
-  background-color: var(--sedonaNature);
+  width: 1200px;
+  height: 509px;
+  background-color: var(--sedona-nature);
+  background-image:
+    url('../img/content/svg/welcome/welcome.svg'),
+    url('../img/decor/svg/mask/sedona_nature/white_mask.svg'),
+    url('../img/content/jpg/background/sedona_nature/sedona_nature.jpg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 371.38px 77.35px, 50% 100%, 50% 50%;
 }
 
 /*---------*/
@@ -177,7 +922,7 @@
   line-height: 26px;
 }
 
-.fiveReasonsHeadline {
+.five-reasons-headline {
   line-height: 26px;
   color: var(--darkGray);
 }
@@ -187,47 +932,47 @@
   font-weight: bold;
 }
 
-.advantagesItem:first-child > .trueCityMainContent,
-.advantagesItem:nth-child(2) {
+.outstanding-qualities-item:first-child > .true-city-main-content,
+.outstanding-qualities-item:nth-child(2) {
   background-color: var(--regularBlue);
   color: var(--basicWhite);
 }
 
-.sedonaBuildingPhoto {
+.sedona-building-photo {
   background-color: var(--regularGray);
 }
 
-.devilBridgePhoto {
+.devil-bridge-photo {
   background-color: var(--devilBridge);
 }
 
-.advantagesItem:nth-child(3),
-.advantagesItem:nth-child(4),
-.advantagesItem:nth-child(5) {
+.outstanding-qualities-item:nth-child(3),
+.outstanding-qualities-item:nth-child(4),
+.outstanding-qualities-item:nth-child(5) {
   background-color: var(--specialDoubleLightGray);
 }
 
-.trueCityListItem > .text,
-.advantagesItem:nth-child(3) > .text,
-.advantagesItem:nth-child(4) > .text,
-.advantagesItem:nth-child(5) > .text,
-.infoTextContent > .text {
+.true-city-list-item > .text,
+.outstanding-qualities-item:nth-child(3) > .text,
+.outstanding-qualities-item:nth-child(4) > .text,
+.outstanding-qualities-item:nth-child(5) > .text,
+.info-text-content > .text {
   color: var(--darkGray);
 }
 
 /*---------*/
 
-.questionOfInterest {
+.question-of-interest {
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
 }
 
-.containerForHotelSearchText > .text {
+.container-for-hotel-search-text > .text {
   color: var(--darkGray);
 }
 
-.button.hotelSearch {
+.button.hotel-search {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -235,12 +980,12 @@
   color: var(--basicWhite);
 }
 
-.button.hotelSearch:hover {
+.button.hotel-search:hover {
   background-color: var(--darkBrown);
   color: var(--basicWhite);
 }
 
-.button.hotelSearch:active {
+.button.hotel-search:active {
   background-color: var(--extraDarkBrown);
   color: var(--basicOpacityWhite);
 }
@@ -258,7 +1003,7 @@
   background-color: inherit;
 }
 
-.contactPhone {
+.contact-phone {
   color: var(--basicBlack);
 }
 
@@ -311,44 +1056,28 @@
   background-image: url('../img/decor/svg/icons_social/youtube_opacity_imitation_w20px_h16px.svg');
 }
 
-.websiteBy {
+.website-by {
   line-height: 26px;
 }
 
-.htmlAcademyIntensive .hoverState {
-  display: none;
+.html-academy-intensive:hover .html-academy-logotype-svg-path {
+  fill: var(--regularBlue);
 }
 
-.htmlAcademyIntensive .activeState {
-  display: none;
-}
-
-.htmlAcademyIntensive:hover .defaultState {
-  display: none;
-}
-
-.htmlAcademyIntensive:hover .hoverState {
-  display: inline;
-}
-
-.htmlAcademyIntensive:active .hoverState {
-  display: none;
-}
-
-.htmlAcademyIntensive:active .activeState {
-  display: inline;
+.html-academy-intensive:active .html-academy-logotype-svg-path {
+  fill: var(--specialLightGray);
 }
 
 
 
 /*****main inner page*****/
 
-.sortingInterface {
+.sorting-interface-box {
   font-size: 12px;
   line-height: 18px;
 }
 
-.sortingElement {
+.sorting-element {
   color: var(--basicBlack);
   mix-blend-mode: normal;
   opacity: 0.3;
@@ -356,16 +1085,16 @@
   border-bottom: 1px dotted var(--regularBlue);
 }
 
-.sortingElement:focus {
+.sorting-element:focus {
   color: var(--regularBlue);
   border: none;
 }
 
-.sortingElement:hover {
+.sorting-element:hover {
   color: var(--regularBlue);
 }
 
-.sortingElement:active {
+.sorting-element:active {
   color: var(--basicBlack);
   border: none;
   opacity: 1;
@@ -373,94 +1102,25 @@
 
 
 
-.button[name="up"],
-.button[name="down"] {
-  background-color: var(--basicWhite);
-  border: none;
-  outline: none;
+.button[name="up"]:hover .button-up-svg-path,
+.button[name="down"]:hover .button-down-svg-path {
+  fill: var(--basicBlack)
 }
 
-.button[name="up"] .hoverState {
-  display: none;
-}
-
-.button[name="up"] .activeState {
-  display: none;
-}
-
-.button[name="up"]:focus .defaultState {
-  display: none;
-}
-
-.button[name="up"]:focus .focusState {
-  display: inline;
-}
-
-.button[name="up"]:hover .focusState {
-  display: none;
-}
-
-.button[name="up"]:hover .defaultState {
-  display: none;
-}
-
-.button[name="up"]:hover .hoverState {
-  display: inline;
-}
-
-.button[name="up"]:active .hoverState {
-  display: none;
-}
-
-.button[name="up"]:active .activeState {
-  display: inline;
+.button[name="up"]:active .button-up-svg-path,
+.button[name="down"]:active .button-down-svg-path,
+.button[name="up"]:focus .button-up-svg-path,
+.button[name="down"]:focus .button-down-svg-path {
+  fill: var(--regularBlue)
 }
 
 
 
-.button[name="down"] .hoverState {
-  display: none;
-}
-
-.button[name="down"] .activeState {
-  display: none;
-}
-
-.button[name="down"]:focus .defaultState {
-  display: none;
-}
-
-.button[name="down"]:focus .focusState {
-  display: inline;
-}
-
-.button[name="down"]:hover .focusState {
-  display: none;
-}
-
-.button[name="down"]:hover .defaultState {
-  display: none;
-}
-
-.button[name="down"]:hover .hoverState {
-  display: inline;
-}
-
-.button[name="down"]:active .hoverState {
-  display: none;
-}
-
-.button[name="down"]:active .activeState {
-  display: inline;
-}
-
-
-
-.hotelName:hover {
+.hotel-name:hover {
   color: var(--regularBlue);
 }
 
-.hotelName:active {
+.hotel-name:active {
   color: var(--basicBlack);
   mix-blend-mode: normal;
   opacity: 0.3;
@@ -468,17 +1128,17 @@
 
 
 
-.details {
+.ins {
   font-weight: bold;
   color: var(--basicWhite);
   background-color: var(--regularBlue);
 }
 
-.details:hover {
+.ins:hover {
   background-color: var(--darkBlue);
 }
 
-.details:active {
+.ins:active {
   background-color: var(--extraDarkBlue);
   color: var(--basicOpacityWhite);
 }
@@ -502,10 +1162,10 @@
 
 
 
-.numberOfPoints {
+.number-of-points {
   background-color: var(--extraLightGray);
 }
 
-.numberOfPoints > .text {
+.number-of-points > .text {
   color: var(--regularGray);
 }
