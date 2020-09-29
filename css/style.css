@@ -72,7 +72,7 @@
   margin-left: auto;
 
   background-color: var(--basicWhite);
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .visually-hidden {
@@ -129,7 +129,7 @@
   grid-row-end: -1;
 }
 
-.footer {
+.footer { /*footer накладывается на main в последнем третьем ряду, поэтому я оставил указание расположния*/
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 3;
@@ -211,29 +211,7 @@
 .main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, min-content) 473px;
-  grid-template-areas:
-                      "greeting"
-                      "outstanding-qualities"
-                      "sedona-hotels"
-                      "map";
-  overflow: hidden;
-}
-
-.greeting {
-  grid-area: greeting;
-}
-
-.outstanding-qualities {
-  grid-area: outstanding-qualities;
-}
-
-.sedona-hotels {
-  grid-area: sedona-hotels;
-}
-
-.map {
-  grid-area: map;
+  grid-template-rows: repeat(4, min-content);
 }
 
 
@@ -242,37 +220,23 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
-  grid-template-areas:
-                      "why-sedona"
-                      "outstanding-qualities-list";
+
   margin: 0;
   padding: 0;
 }
 
-.why-sedona {
-  grid-area: why-sedona;
-}
-
-.outstanding-qualities-list {
-  grid-area: outstanding-qualities-list;
-}
-
 
 
 .why-sedona {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
-  grid-template-areas:
-                      "deserve-more"
-                      "five-reasons-headline";
+
   margin: 0;
   padding: 0;
 }
 
 .deserve-more {
-  grid-area: deserve-more;
-
   width: 470px;
   height: 80px;
 
@@ -285,8 +249,6 @@
 }
 
 .five-reasons-headline {
-  grid-area: five-reasons-headline;
-
   width: 519px;
   height: auto;
 
@@ -339,17 +301,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
-  grid-template-areas:
-                      "true-city-main-content"
-                      "true-city-list";
-}
-
-.true-city-main-content {
-  grid-area: true-city-main-content;
-}
-
-.true-city-list {
-  grid-area: true-city-list;
 }
 
 
@@ -445,7 +396,7 @@
 
   padding: 0;
   margin-top: 60px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .housing .subject {
@@ -486,7 +437,7 @@
 
   padding: 0;
   margin-top: 61px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .food .subject {
@@ -527,7 +478,7 @@
 
   padding: 0;
   margin-top: 55px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .souvenirs .subject {
@@ -895,22 +846,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr min-content;
-  grid-template-areas:
-                      "inner-page-header"
-                      "inner-page-main"
-                      "inner-page-footer";
-}
-
-.inner-page-header {
-  grid-area: inner-page-header;
-}
-
-.inner-page-main {
-  grid-area: inner-page-main;
-}
-
-.inner-page-footer {
-  grid-area: inner-page-footer;
 }
 
 
@@ -919,17 +854,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
-  grid-template-areas:
-                      "filter"
-                      "common-box";
-}
-
-.filter {
-  grid-area: filter;
-}
-
-.common-box {
-  grid-area: common-box;
 }
 
 
@@ -938,17 +862,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
-  grid-template-areas:
-                      "range"
-                      "relevant-propositions";
-}
-
-.range {
-  grid-area: range;
-}
-
-.relevant-propositions {
-  grid-area: relevant-propositions;
 }
 
 
@@ -1333,6 +1246,7 @@
 
 .map {
   background-color: var(--map);
+  line-height: 0;
 }
 
 
