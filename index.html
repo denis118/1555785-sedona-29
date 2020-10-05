@@ -16,13 +16,13 @@
   <div class="main-container main-page">
 
     <header class="main-header">
-      <a><img class="main-header-logo" src="img/content/svg/logo/logo.svg" width="138" height="70" alt="Логотип сайта"></a>
       <nav class="main-navigation">
+        <a><img class="main-header-logo" src="img/content/svg/logo/logo.svg" width="138" height="70" alt="Логотип сайта"></a>
         <ul class="list main-navigation-list">
-          <li class="main-navigation-list-item info-item"><a class="link completed-transition-info" href="blank.html">Информация</a></li>
-          <li class="main-navigation-list-item media-item"><a class="link completed-transition-media" href="blank.html">Фото и видео</a></li>
-          <li class="main-navigation-list-item state-map-item"><a class="link completed-transition-state-map" href="blank.html">Карта штата</a></li>
-          <li class="main-navigation-list-item hotels-item"><a class="link completed-transition-hotels" href="hotels.html">Гостиницы</a></li>
+          <li class="main-navigation-list-item left-side info-item"><a class="link completed-transition-info" href="blank.html">Информация</a></li>
+          <li class="main-navigation-list-item left-side media-item"><a class="link completed-transition-media" href="blank.html">Фото и видео</a></li>
+          <li class="main-navigation-list-item right-side state-map-item"><a class="link completed-transition-state-map" href="blank.html">Карта штата</a></li>
+          <li class="main-navigation-list-item right-side hotels-item"><a class="link completed-transition-hotels" href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -91,9 +91,69 @@
         <h2 class="visually-hidden">Гостиницы в Седоне</h2>
         <div class="container-for-hotel-search-text">
           <p class="question-of-interest">Заинтересовались?</p>
-          <p class="text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие&nbsp;предложения&nbsp;гостиниц&nbsp;в&nbsp;Седоне</p>
         </div>
-        <a class="link button hotel-search" href="blank.html"><span class="hotel-search-link-text">Поиск гостиницы в Седоне</span></a>
+        <a class="link button hotel-search" href="#!"><span class="hotel-search-link-text">Поиск гостиницы в Седоне</span></a>
+
+        <form class="form-search" action="#" method="GET">
+          <fieldset class="fieldset-box check-in-elements">
+            <label class="modal-window-text check-in-out-date-labels check-in-date-label" for="check-in">Дата заезда:</label><!--
+            --><p class="date-interactive-elements-group">
+              <input class="check-in-out-date-fields check-in-date-field" type="date" name="check-in-date" id="check-in"><!--
+              --><button class="button calendar-button check-in-button" type="button" name="calendar">
+                <img class="image calendar-image" src="img/content/svg/modal_search/calendar.svg" width="21" height="22" alt="Иконка календаря">
+              </button>
+            </p>
+          </fieldset>
+
+          <fieldset class="fieldset-box check-out-elements">
+            <label class="modal-window-text check-in-out-date-labels check-out-date-label" for="check-out">Дата выезда:</label><!--
+            --><p class="date-interactive-elements-group">
+              <input class="check-in-out-date-fields check-out-date-field" type="date" name="check-out-date" id="check-out"><!--
+              --><button class="button calendar-button check-out-button" type="button" name="calendar">
+                <img class="image calendar-image" src="img/content/svg/modal_search/calendar.svg" width="21" height="22" alt="Иконка календаря">
+              </button>
+            </p>
+          </fieldset>
+
+          <fieldset class="fieldset-box participants-number-by-age">
+            <fieldset class="fieldset-box adults-count-zone">
+              <p class="modal-window-text adults">Взрослые:</p><!--
+              --><p class="amount-interface adults-amount">
+                <button class="button button-minus minus-adult-man" type="button" name="minus-adult" id="decrease-adults">
+                  <svg class="image minus-image" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="svg-fill" width="12" height="3" fill="#A9A9A9"/>
+                    </svg>
+                </button><!--
+                --><output class="output-field output-adults" name="adults" value="0" min="0">2</output><!--
+                --><button class="button button-plus plus-adult-man" type="button" name="plus-adult" id="increase-adults">
+                  <svg class="image plus-image" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="svg-fill" fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+                    </svg>
+                </button>
+              </p>
+            </fieldset><!--
+
+            --><fieldset class="fieldset-box children-count-zone">
+              <p class="modal-window-text children">Дети:</p><!--
+              --><p class="amount-interface children-amount">
+                <button class="button button-minus minus-child-man" type="button" name="minus-child" id="decrease-children">
+                  <svg class="image minus-image" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="svg-fill" width="12" height="3" fill="#A9A9A9"/>
+                    </svg>
+                </button><!--
+                --><output class="output-field output-children" name="children" value="0" min="0">0</output><!--
+                --><button class="button button-plus plus-child-man" type="button" name="plus-child" id="increase-children">
+                  <svg class="image plus-image" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="svg-fill" fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+                    </svg>
+                </button>
+              </p>
+            </fieldset>
+          </fieldset>
+
+          <button class="button submit-button" type="submit" name="search-hotels"><span class="search-word modal-window-text">Найти</span></button>
+        </form>
       </section>
 
       <section class="map">
@@ -104,20 +164,35 @@
     </main>
 
     <footer class="footer">
-      <div class="contacts-and-copyright">
+      <div class="telephone-and-copyright">
         <p class="paragraph paragraph-tel">
           <span class="caption">#visitSEDONA</span>
           <span class="caption">ТЕЛ:<a class="link contact-phone" href="tel:+74956660166"> +7(495) 666-01-66</a></span>
         </p>
       </div>
-      <div class="contacts-and-copyright">
+      <div class="social-networks">
         <p class="paragraph paragraph-social">
-          <a class="link button social twitter" href="#"><span class="visually-hidden">Ссылка на твиттер-аккаунт</span></a>
-          <a class="link button social facebook" href="#"><span class="visually-hidden">Ссылка на аккаунт в Фэйсбук</span></a>
-          <a class="link button social youtube" href="#"><span class="visually-hidden">Ссылка на Ютуб-канал</span></a>
+          <a class="link button social twitter" href="#">
+            <span class="visually-hidden">Ссылка на твиттер-аккаунт</span>
+            <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
+            </svg>
+          </a>
+          <a class="link button social facebook" href="#">
+            <span class="visually-hidden">Ссылка на аккаунт в Фэйсбук</span>
+            <svg class="icon" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+            </svg>
+          </a>
+          <a class="link button social youtube" href="#">
+            <span class="visually-hidden">Ссылка на Ютуб-канал</span>
+            <svg class="icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+            </svg>
+          </a>
         </p>
       </div>
-      <div class="contacts-and-copyright">
+      <div class="creators">
         <p class="paragraph paragraph-creators">
           <span class="website-by">Website by</span>
           <a class="link html-academy-intensive" href="https://htmlacademy.ru/intensive/htmlcss">
@@ -131,6 +206,8 @@
     </footer>
 
   </div>
+
+  <script src="js/hide_hotel_search_form.js"></script>
 
 </body>
 
