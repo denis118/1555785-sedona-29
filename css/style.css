@@ -1043,7 +1043,7 @@ positioning
   flex-grow: 1;
 
   display: grid;
-  align-items: center;
+  grid-template-columns: 1fr min-content;
 }
 
 
@@ -1104,17 +1104,14 @@ positioning
 
 
 
-.paragraph-creators {
-  justify-self: end;
-
-  width: 197px;
+.html-academy-intensive {
+  align-self: center;
   margin-right: 138px;
-
-  display: flex;
-  align-items: center;
 }
 
 .website-by {
+  justify-self: end;
+  align-self: center;
   margin-right: 8px;
 }
 
@@ -1524,26 +1521,28 @@ positioning
 
 
 .number-of-points {
-  width: 110px;
-  height: 27px;
+  margin-top: 47px;
+  margin-bottom: 0;
+
+  padding-top: 3px;
+  padding-right: 12px;
+  padding-left: 15px;
+  padding-bottom: 3px;
 
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
+  justify-content: center;
 }
 
-.points-box {
-  width: 83px;
-  margin-top: 3px;
-  margin-right: 12px;
-  margin-bottom: 3px;
+.number-of-points > .text:first-child {
+  margin-right: 4px;
 }
 
 
 
-.hotel-name > .name-part-two {
-  margin-left: -2px;
-}
+/* .hotel-name > .name-part-two {
+  margin-left: 1px;
+} */
 
 
 
