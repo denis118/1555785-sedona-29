@@ -19,10 +19,10 @@
       <nav class="main-navigation">
         <a><img class="main-header-logo" src="img/content/svg/logo/logo.svg" width="138" height="70" alt="Логотип сайта"></a>
         <ul class="list main-navigation-list">
-          <li class="main-navigation-list-item left-side info-item"><a class="link completed-transition-info" href="blank.html">Информация</a></li>
-          <li class="main-navigation-list-item left-side media-item"><a class="link completed-transition-media" href="blank.html">Фото и видео</a></li>
-          <li class="main-navigation-list-item right-side state-map-item"><a class="link completed-transition-state-map" href="blank.html">Карта штата</a></li>
-          <li class="main-navigation-list-item right-side hotels-item"><a class="link completed-transition-hotels" href="hotels.html">Гостиницы</a></li>
+          <li class="main-navigation-list-item left-side info-item"><a class="link" href="blank.html">Информация</a></li>
+          <li class="main-navigation-list-item left-side media-item"><a class="link" href="blank.html">Фото и видео</a></li>
+          <li class="main-navigation-list-item right-side state-map-item"><a class="link" href="blank.html">Карта штата</a></li>
+          <li class="main-navigation-list-item right-side hotels-item"><a class="link" href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -69,8 +69,7 @@
               <p class="subject">Там есть<br>мост Дьявола</p><!--без br текст по-разному отображается в Хроме и Мозиле, если корректировать только шириной блока-->
               <p class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
-            <img class="devil-bridge-photo" src="img/content/jpg/devil_bridge_photo/devil_bridge_photo.jpg" width="800" height="256"
-              alt="Горное образование, одна из достопримечательностей Седоны, под названием 'Мост Дьявола'">
+            <img class="devil-bridge-photo" src="img/content/jpg/devil_bridge_photo/devil_bridge_photo.jpg" width="800" height="256" alt="Горное образование, одна из достопримечательностей Седоны, под названием 'Мост Дьявола'">
           </li>
           <li class="outstanding-qualities-item small-area">
             <p class="subject">Небольшая площадь</p>
@@ -93,7 +92,7 @@
         <p class="question-of-interest">Заинтересовались?</p>
         <p class="text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
-        <a class="link button hotel-search" href="#!"><span class="hotel-search-link-text">Поиск гостиницы в Седоне</span></a>
+        <a class="link button hotel-search" href="#!">Поиск гостиницы в Седоне</a>
 
         <form class="form-search" action="#" method="GET">
           <div class="search-form-content-wrapper">
@@ -102,8 +101,8 @@
               <label class="modal-window-text check-in-out-date-labels check-in-date-label" for="check-in">Дата заезда:</label>
               <div class="absolute-position-wrapper">
                 <input class="input-field check-in-out-date-fields check-in-date-field" type="text" name="check-in-date" id="check-in" value="24 апреля 2017">
-                <button class="button calendar-button check-in-button" type="button" name="calendar" id="check-in-calendar-button">
-                  <svg class="image calendar-image" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="button calendar-button check-in-button" type="button" name="calendar" id="check-in-calendar-button" aria-label="Показать виджет каляндаря">
+                  <svg class="image calendar-image" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <path class="calendar-svg-fill" fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z" fill="#A9A9A9"/>
                     <path class="calendar-svg-fill" fill-rule="evenodd" clip-rule="evenodd" d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z" fill="#A9A9A9"/>
                   </svg>
@@ -116,8 +115,8 @@
               <label class="modal-window-text check-in-out-date-labels check-out-date-label" for="check-out">Дата выезда:</label>
               <div class="absolute-position-wrapper">
                 <input class="input-field check-in-out-date-fields check-out-date-field" type="text" name="check-out-date" id="check-out" value="4 июля 2017">
-                <button class="button calendar-button check-out-button" type="button" name="calendar" id="check-out-calendar-button">
-                  <svg class="image calendar-image" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="button calendar-button check-out-button" type="button" name="calendar" id="check-out-calendar-button" aria-label="Показать виджет каляндаря">
+                  <svg class="image calendar-image" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <path class="calendar-svg-fill" fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z" fill="#A9A9A9"/>
                     <path class="calendar-svg-fill" fill-rule="evenodd" clip-rule="evenodd" d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z" fill="#A9A9A9"/>
                   </svg>
@@ -130,14 +129,14 @@
               <div class="field-box adults-count-zone">
                 <label class="modal-window-text adults" for="adults-number">Взрослые:</label><!--
                 --><p class="amount-interface adults-amount">
-                  <button class="button button-minus minus-adult-man" type="button" name="minus-adult" id="decrease-adults">
-                    <svg class="image minus-image" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="button button-minus minus-adult-man" type="button" name="minus-adult" id="decrease-adults" aria-label="Уменьшить количество взрослых на одного человека">
+                    <svg class="image minus-image" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <rect class="plus-minus-svg-fill" width="12" height="3" fill="#A9A9A9"/>
                     </svg>
                   </button><!--
-                  --><input class="input-field input-adults" type="text" name="adults" value="2" min="0" id="adults-number"><!--
-                  --><button class="button button-plus plus-adult-man" type="button" name="plus-adult" id="increase-adults">
-                    <svg class="image plus-image" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  --><input class="input-field input-adults" type="text" name="adults" value="2" id="adults-number"><!--
+                  --><button class="button button-plus plus-adult-man" type="button" name="plus-adult" id="increase-adults" aria-label="Увеличить количество взрослых на одного человека">
+                    <svg class="image plus-image" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <path class="plus-minus-svg-fill" fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
                     </svg>
                   </button>
@@ -147,14 +146,14 @@
               --><div class="field-box children-count-zone">
                 <label class="modal-window-text children" for="children-number">Дети:</label><!--
                 --><p class="amount-interface children-amount">
-                  <button class="button button-minus minus-child-man" type="button" name="minus-child" id="decrease-children">
-                    <svg class="image minus-image" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="button button-minus minus-child-man" type="button" name="minus-child" id="decrease-children" aria-label="Уменьшить количество детей на одного ребёнка">
+                    <svg class="image minus-image" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <rect class="plus-minus-svg-fill" width="12" height="3" fill="#A9A9A9"/>
                     </svg>
                   </button><!--
-                  --><input class="input-field input-children" type="text" name="children" value="0" min="0" id="children-number"><!--
-                  --><button class="button button-plus plus-child-man" type="button" name="plus-child" id="increase-children">
-                    <svg class="image plus-image" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  --><input class="input-field input-children" type="text" name="children" value="0" id="children-number"><!--
+                  --><button class="button button-plus plus-child-man" type="button" name="plus-child" id="increase-children" aria-label="Увеличить количество детей на одного ребёнка">
+                    <svg class="image plus-image" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <path class="plus-minus-svg-fill" fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
                     </svg>
                   </button>
@@ -162,15 +161,14 @@
               </div>
             </fieldset>
 
-            <button class="button submit-button" type="submit" name="search-hotels"><span class="search-word modal-window-text">Найти</span></button>
+            <button class="button submit-button" type="submit" name="search-hotels" aria-label="Показать отели в городе Седона штата Аризона, США, доступные для бронирования подходящщих по количеству человек номеров в указанные даты"><span class="search-word modal-window-text">Найти</span></button>
           </div>
         </form>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Седона на карте</h2>
-        <img class="map-image" src="img/content/jpg/map_image/map.jpg" width="1199" height="594"
-          alt="Город Седона находится в штате Аризона Соединённых Штатов Америки">
+        <iframe class="sedona-interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18050599032!2d-111.83015807301918!3d34.85437338101056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1602358663951!5m2!1sru!2sru" width="1200" height="473" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Город Седона находится в штате Аризона Соединённых Штатов Америки"></iframe>
       </section>
     </main>
 
@@ -184,7 +182,7 @@
           <li class="social-networks-list-item twitter-item">
             <a class="link button social twitter" href="#">
               <span class="visually-hidden">Ссылка на твиттер-аккаунт</span>
-              <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
               </svg>
             </a>
@@ -192,7 +190,7 @@
           <li class="social-networks-list-item facebook-item">
             <a class="link button social facebook" href="#">
               <span class="visually-hidden">Ссылка на аккаунт в Фэйсбук</span>
-              <svg class="icon" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="icon" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
               </svg>
             </a>
@@ -200,7 +198,7 @@
           <li class="social-networks-list-item youtube-item">
             <a class="link button social youtube" href="#">
               <span class="visually-hidden">Ссылка на Ютуб-канал</span>
-              <svg class="icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
               </svg>
             </a>

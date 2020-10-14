@@ -143,17 +143,17 @@ main-page
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 2;
-  grid-row-end: -1;
+  grid-row-end: 3;
 }
 
-.footer { /*footer накладывается на main в последнем третьем ряду, поэтому я оставил указание расположния*/
+.footer {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 3;
-  grid-row-end: -1;
+  grid-row-end: 4;
 
-  z-index: 1;
-  opacity: 0.9;
+  /* z-index: 1; */
+  /* opacity: 0.9; */
 }
 
 
@@ -357,6 +357,11 @@ stylization
   color: var(--basicWhite);
 }
 
+.button.hotel-search:focus { /* Добавил для доступности */
+  outline: 2px dotted var(--basicWhite);
+  outline-offset: -3px;
+}
+
 .button.hotel-search:hover {
   background-color: var(--darkBrown);
   color: var(--basicWhite);
@@ -371,6 +376,10 @@ stylization
 
 .map {
   background-color: var(--map);
+  background-image: url('../img/content/jpg/map_image/map.jpg'); /* добавил, чтобы при отключении JavaScript на месте интерактивной карты не было пусого места */
+  background-repeat: no-repeat;
+  background-position: cover;
+
   line-height: 0;
 }
 
@@ -932,23 +941,10 @@ positioning
 
 .sedona-hotels .hotel-search {
   width: 568px;
-  height: 86px;
 
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin-bottom: 0;
-
-  text-align: center;
-}
-
-.hotel-search-link-text {
-  display: block;
-  width: 319px;
-  height: 26px;
-
-  padding: 0;
-  margin-top: 30px;
-  margin-right: 124px;
-  margin-left: 125px;
-  margin-bottom: 30px;
 
   text-align: center;
 }
@@ -1167,7 +1163,7 @@ stylization
 .sorting-element {
   color: var(--basicBlack);
   mix-blend-mode: normal;
-  opacity: 0.3;
+  opacity: 0.54; /* изменил значение на максимально приближённое к макету, т. к. прежнее не соответствовало стандартам WCAG по уровню контрастности */
 
   border-bottom: 1px dotted var(--regularBlue);
 }
@@ -1189,16 +1185,16 @@ stylization
 
 
 
-.button[name="up"]:hover .button-up-svg-path,
-.button[name="down"]:hover .button-down-svg-path {
-  fill: var(--basicBlack)
+.button.up:hover .button-up-svg-path,
+.button.down:hover .button-down-svg-path {
+  fill: var(--basicBlack);
 }
 
-.button[name="up"]:active .button-up-svg-path,
-.button[name="down"]:active .button-down-svg-path,
-.button[name="up"]:focus .button-up-svg-path,
-.button[name="down"]:focus .button-down-svg-path {
-  fill: var(--regularBlue)
+.button.up:active .button-up-svg-path,
+.button.down:active .button-down-svg-path,
+.button.up:focus .button-up-svg-path,
+.button.down:focus .button-down-svg-path {
+  fill: var(--regularBlue);
 }
 
 
@@ -1221,6 +1217,11 @@ stylization
   background-color: var(--regularBlue);
 }
 
+.ins:focus { /* добавил свой стиль, потому что в Мозиле не работал стандартный */
+  outline: 1px dotted var(--basicWhite);
+  outline-offset: -2px;
+}
+
 .ins:hover {
   background-color: var(--darkBlue);
 }
@@ -1236,6 +1237,11 @@ stylization
   font-weight: bold;
   color: var(--basicWhite);
   background-color: var(--regularBrown);
+}
+
+.booking:focus { /* добавил свой стиль, потому что в Мозиле не работал стандартный */
+  outline: 1px dotted var(--basicWhite);
+  outline-offset: -2px;
 }
 
 .booking:hover {
@@ -1372,16 +1378,16 @@ positioning
   flex-wrap: wrap;
 }
 
-.button[name="up"],
-.button[name="down"] {
+.button.up,
+.button.down {
   line-height: 0;
 }
 
-.button[name="down"] {
+.button.down {
   margin-right: 73px;
 }
 
-.button[name="up"] {
+.button.up {
   margin-right: 12px;
 }
 
@@ -1449,6 +1455,7 @@ positioning
   margin-bottom: 15.5px;
 
   text-align: left;
+  vertical-align: auto;
 }
 
 .day-min-price {
@@ -1459,6 +1466,7 @@ positioning
   margin-bottom: 15.5px;
 
   text-align: left;
+  vertical-align: auto;
 }
 
 
@@ -1466,26 +1474,24 @@ positioning
 .button.ins {
   display: inline-block;
   width: 110px;
-  height: 27px;
+
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  text-align: center;
+  vertical-align: auto;
 }
 
 .button.booking {
   display: inline-block;
   width: 142px;
-  height: 27px;
+
+  padding-top: 3px;
+  padding-bottom: 3px;
   margin-left: 6px;
-}
 
-.ins-box {
-  display: block;
-  margin-top: 3px;
-  margin-left: 17px;
-}
-
-.booking-box {
-  display: block;
-  margin-top: 3px;
-  margin-left: 16px;
+  text-align: center;
+  vertical-align: auto;
 }
 
 
@@ -1516,6 +1522,8 @@ positioning
 
 .star-item > .link {
   display: inline-block;
+
+  vertical-align: auto;
 }
 
 
@@ -1717,6 +1725,16 @@ filter
 
 
 
+.checkbox-for-filtration:focus + .filter-checkbox-label { /* добавил для доступности */
+  outline: 1px dotted var(--basicWhite);
+}
+
+.checkbox-for-filtration:checked:focus + .filter-checkbox-label { /* добавил для доступности */
+  outline: 1px dotted var(--basicWhite);
+}
+
+
+
 .cost-wrapper {
   width: 317px;
   box-sizing: border-box;
@@ -1760,7 +1778,7 @@ filter
 
 .filter-input-field {
   border: none;
-  outline: none;
+  /* outline: none; */
   color: var(--basicWhite);
   background-color: var(--fullOpacityWhite);
 }
@@ -1824,7 +1842,7 @@ filter
 }
 
 .final-cost-bar-handle {
-  left: 251px;
+  left: 80%;
 }
 
 .initial-cost-bar-handle:hover {
@@ -1846,7 +1864,7 @@ filter
   padding-right: 35px;
   padding-left: 36px;
   padding-bottom: 6px; /*по макету значение 8px, но я отнял 2px, т.к. по вертикали border-box не пересчитывает*/
-  /* margin: 0 auto 32px; */
+
   margin-top: 0;
   margin-right: 95px;
   margin-left: 85px;
@@ -1863,6 +1881,12 @@ filter
   font-size: inherit;
   line-height: inherit;
   text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.filter-search:focus {
+  outline: 1px dotted var(--basicWhite);
 }
 
 .filter-search:hover {
@@ -1924,10 +1948,15 @@ hotel search window
 .field-box,
 .button,
 .image {
-	border: none;
-  outline: none;
+  border: none;
   padding: 0;
   margin: 0;
+}
+
+.input-field,
+.button-minus,
+.button-plus {
+  outline-offset: -1px;
 }
 
 
@@ -1996,6 +2025,7 @@ hotel search window
   left: 316px;
 
   background-color: transparent;
+  cursor: pointer;
 }
 
 .calendar-button:hover .calendar-svg-fill {
@@ -2019,6 +2049,7 @@ hotel search window
   display: inline-block;
   width: calc(var(--searchFormContentWrapperWidth)/2);
   height: 38px; /* не смог получить высоту строки только при помощи padding и margin вложенных элементов без явного задания "height": если ставлю значения по макету, то результат больше 38px*/
+  vertical-align: auto;
 }
 
 .children-count-zone {
@@ -2029,6 +2060,7 @@ hotel search window
 .children,
 .amount-interface {
   display: inline-block;
+  vertical-align: auto;
 }
 
 .adults {
@@ -2072,6 +2104,7 @@ hotel search window
 .button-minus,
 .button-plus {
   background-color: inherit;
+  cursor: pointer;
 }
 
 .minus-adult-man {
@@ -2143,24 +2176,22 @@ hotel search window
 .submit-button {
   margin-top: 54px;
 
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  text-align: center;
+
   background-color: var(--regularBlue);
-}
-
-.search-word {
-  display: block;
-
-	margin-top: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 16px;
+  cursor: pointer;
 
   font-family: 'PT Sans';
-  font-weight: 700;
-  line-height: 26px;
+  font-weight: inherit;
+  line-height: inherit;
   font-size: 21px;
-  text-transform: uppercase;
-	color: var(--basicWhite);
+  text-transform: inherit;
+  color: var(--basicWhite);
 }
+
 
 
 .submit-button:hover {
