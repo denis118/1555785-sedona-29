@@ -496,6 +496,7 @@ positioning
 .sedona-building-photo {
   flex-basis: 800px;
   align-self: center;
+  line-height: 0;
 }
 
 .small-city-life {
@@ -533,8 +534,8 @@ positioning
 
   padding: 0;
   margin-top: 47px;
-  margin-right: 139px;
-  margin-left: 139px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 0;
 
   text-align: center;
@@ -694,6 +695,7 @@ positioning
 .devil-bridge-photo {
   flex-basis: 800px;
   align-self: center;
+  line-height: 0;
 }
 
 .devil-bridge-sight {
@@ -747,8 +749,8 @@ positioning
 
   padding: 0;
   margin-top: 0;
-  margin-right: 49px;
-  margin-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 51px;
 
   text-align: center;
