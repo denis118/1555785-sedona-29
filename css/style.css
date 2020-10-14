@@ -514,8 +514,8 @@ positioning
 
   padding: 0;
   margin-top: 25px;
-  margin-right: 174px;
-  margin-left: 175px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 23px;
 
   font-family: 'PT Sans';
@@ -715,8 +715,8 @@ positioning
 
   padding: 0;
   margin-top: 25px;
-  margin-right: 174px;
-  margin-left: 175px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 23px;
 
   font-family: PT Sans;
