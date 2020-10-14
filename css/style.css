@@ -2200,8 +2200,5 @@ hotel search window
 
 .submit-button:active  {
   background-color: var(--extraDarkBlue);
-}
-
-.submit-button:active > .search-word {
-  opacity: 0.3;
+  color: var(--basicOpacityWhite);
 }
