@@ -176,12 +176,12 @@ stylization
   line-height: 26px;
 }
 
-.main-navigation-list-item > .link:visited {
+/* .main-navigation-list-item > .link:visited {
   color: var(--regularBrown);
-}
+} */
 
 .main-navigation-list-item > .link:focus {
-  color: var(--regularBrown);
+  color: var(--regularBlue);
 }
 
 .main-navigation-list-item > .link:hover {
@@ -189,7 +189,7 @@ stylization
 }
 
 .main-navigation-list-item > .link:active {
-  color: var(--basicBlack);
+  color: var(--regularBrown);
   mix-blend-mode: normal;
   opacity: 0.3;
 }
