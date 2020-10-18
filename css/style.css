@@ -30,7 +30,7 @@
 
   /**backgroundColors**/
   --sedonaNature: #DBE9F1;
-  --map: #F2F1EF;
+  --map: #CBDDA9;
   --devilBridge: #DBA68D;
   --barHandle: #ABABAB;
 
@@ -134,7 +134,7 @@ main-page
   grid-template-rows: min-content 1fr min-content;
 }
 
-.main-header {
+/* .main-header {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 1;
@@ -154,9 +154,9 @@ main-page
   grid-row-start: 3;
   grid-row-end: 4;
 
-  /* z-index: 1; */
-  /* opacity: 0.9; */
-}
+  z-index: 1;
+  opacity: 0.9;
+} */
 
 
 
@@ -170,15 +170,37 @@ stylization
   background-color: inherit;
 }
 
+.first-page-link {
+  border: none;
+  outline: none;
+}
+
+.first-page-link::before {
+  content: "";
+  width: 138px;
+  height: 70px;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.first-page-link:focus::before {
+  outline: 1px dotted var(--basicBlack);
+}
+
 .main-navigation-list-item > .link {
   color: var(--basicBlack);
   font-weight: bold;
   line-height: 26px;
 }
 
-/* .main-navigation-list-item > .link:visited {
+.hotels-active-mode > .link {
   color: var(--regularBrown);
-} */
+}
+
+
 
 .main-navigation-list-item > .link:focus {
   color: var(--regularBlue);
@@ -189,7 +211,7 @@ stylization
 }
 
 .main-navigation-list-item > .link:active {
-  color: var(--regularBrown);
+  color: var(--basicBlack);
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -206,7 +228,7 @@ positioning
 
 
 
-.main-header-logo {
+.main-logo {
   width: 138px;
   height: 70px;
 
@@ -515,7 +537,7 @@ positioning
 
 .sedona-building-photo {
   flex-basis: 800px;
-  align-self: center;
+  align-self: top;
   line-height: 0;
 }
 
@@ -714,7 +736,7 @@ positioning
 
 .devil-bridge-photo {
   flex-basis: 800px;
-  align-self: center;
+  align-self: top;
   line-height: 0;
 }
 
@@ -1041,8 +1063,9 @@ positioning
   flex-basis: 400px;
   flex-grow: 1;
 
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .social-networks {
@@ -1182,7 +1205,10 @@ stylization
   line-height: 18px;
 }
 
-
+.sorting-active-mode > .sorting-element {
+  color: var(--regularBlue);
+  border: none;
+}
 
 .sorting-element {
   color: var(--basicBlack);
@@ -1192,11 +1218,9 @@ stylization
   border-bottom: 1px dotted var(--regularBlue);
 }
 
-.sorting-element:focus {
-  color: var(--regularBlue);
-  border: none;
-}
 
+
+.sorting-element:focus,
 .sorting-element:hover {
   color: var(--regularBlue);
 }
@@ -1209,15 +1233,19 @@ stylization
 
 
 
+.direction-active-mode .svg-path {
+  fill: var(--regularBlue);
+}
+
+.button.up:focus .button-up-svg-path,
+.button.down:focus .button-down-svg-path,
 .button.up:hover .button-up-svg-path,
 .button.down:hover .button-down-svg-path {
   fill: var(--basicBlack);
 }
 
 .button.up:active .button-up-svg-path,
-.button.down:active .button-down-svg-path,
-.button.up:focus .button-up-svg-path,
-.button.down:focus .button-down-svg-path {
+.button.down:active .button-down-svg-path {
   fill: var(--regularBlue);
 }
 
@@ -1443,18 +1471,21 @@ positioning
 
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .link.hotel-photo {
+  margin-top: 6px;
   line-height: 0;
 }
 
 
 
 .info-box {
-  flex-grow: 1;
+  width: 726px;
+  /* flex-grow: 1; */
   margin-left: 29px;
+  margin-right: 29px;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -1524,9 +1555,12 @@ positioning
 
 
 .hotel-rating {
+  flex-basis: 134px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
 
   margin-top: 29px;
   margin-right: 73px;
@@ -1556,12 +1590,14 @@ positioning
 
 
 .number-of-points {
+  width: 110px;
+
   margin-top: 47px;
   margin-bottom: 0;
 
   padding-top: 3px;
-  padding-right: 12px;
-  padding-left: 15px;
+  /* padding-right: 12px; */
+  /* padding-left: 15px; */
   padding-bottom: 3px;
 
   display: flex;
@@ -2066,6 +2102,18 @@ hotel search window
 
 
 
+.check-in-out-date-fields:focus {
+  background-color: var(--basicWhite);
+  outline: 2px solid var(--upperStrongLightGray);
+  outline-offset: -2px;
+}
+
+.check-in-out-date-fields:hover {
+  background-color: var(--strongLightGray);
+}
+
+
+
 .calendar-button {
   position: absolute;
   top: 7px;
@@ -2075,18 +2123,16 @@ hotel search window
   cursor: pointer;
 }
 
+.calendar-button:focus .calendar-svg-fill { /* добавил для доступности */
+  fill: var(--basicBlack);
+}
+
 .calendar-button:hover .calendar-svg-fill {
   fill: var(--basicBlack);
 }
 
 .calendar-button:active .calendar-svg-fill {
   fill: var(--regularBlue);
-}
-
-.check-in-out-date-fields:focus {
-  background-color: var(--basicWhite);
-  outline: 2px solid var(--upperStrongLightGray);
-  outline-offset: -2px;
 }
 
 
@@ -2186,12 +2232,20 @@ hotel search window
   vertical-align: middle;
 }
 
+.minus-adult-man:focus  .plus-minus-svg-fill { /* добавил для доступности */
+  fill: var(--basicBlack);
+}
+
 .minus-adult-man:hover  .plus-minus-svg-fill {
   fill: var(--basicBlack);
 }
 
 .minus-adult-man:active  .plus-minus-svg-fill {
   fill: var(--regularBlue);
+}
+
+.plus-adult-man:focus  .plus-minus-svg-fill { /* добавил для доступности */
+  fill: var(--basicBlack);
 }
 
 .plus-adult-man:hover  .plus-minus-svg-fill {
@@ -2202,12 +2256,20 @@ hotel search window
   fill: var(--regularBlue);
 }
 
+.minus-child-man:focus  .plus-minus-svg-fill { /* добавил для доступности */
+  fill: var(--basicBlack);
+}
+
 .minus-child-man:hover  .plus-minus-svg-fill {
   fill: var(--basicBlack);
 }
 
 .minus-child-man:active  .plus-minus-svg-fill {
   fill: var(--regularBlue);
+}
+
+.plus-child-man:focus  .plus-minus-svg-fill { /* добавил для доступности */
+  fill: var(--basicBlack);
 }
 
 .plus-child-man:hover  .plus-minus-svg-fill {
