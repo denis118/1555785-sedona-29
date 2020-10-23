@@ -18,14 +18,14 @@
 
   --darkGray: #333333;
   --regularGray: #666666;
-  --subLightGray: #6A6A6A; /* for checkbox block mode in filter */
+  --subLightGray: #6A6A6A;
   --lightGray: #A9A9A9;
   --doubleLightGray: #B3B3B3;
-  --tripleLightGray: #CACACA; /* for upDown buttons */
+  --tripleLightGray: #CACACA;
   --strongLightGray: #EBEBEB;
   --upperStrongLightGray: #E5E5E5;
   --extraLightGray: #F2F2F2;
-  --specialLightGray: #BDBBBC; /* for HTMLAcademy link click mode */
+  --specialLightGray: #BDBBBC;
   --specialDoubleLightGray: #EEEEEE;
 
   /**backgroundColors**/
@@ -46,7 +46,7 @@
 
 
 .page {
-  height: 100%; /*чтобы при нехватке контента подвал прижимался к нижней части страницы*/
+  height: 100%;
 }
 
 
@@ -133,30 +133,6 @@ main-page
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
 }
-
-/* .main-header {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.main {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.footer {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 3;
-  grid-row-end: 4;
-
-  z-index: 1;
-  opacity: 0.9;
-} */
 
 
 
@@ -312,8 +288,33 @@ stylization
     url('../img/content/svg/welcome/welcome.svg'),
     url('../img/decor/svg/mask/sedona_nature/white_mask.svg'),
     url('../img/content/jpg/background/sedona_nature/sedona_nature.jpg');
-  background-repeat: no-repeat, no-repeat, no-repeat;
+
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: 371.38px 77.35px, 50% 100%, 50% 50%;
+}
+
+
+
+.outstanding-qualities {
+  position: relative;
+}
+
+.outstanding-qualities::before {
+  content: "";
+
+  display: block;
+  width: 1200px;
+  height: 57px;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  transform: translate(0, -99.999%);
+
+  background-image: url('../img/decor/svg/mask/sedona_nature/white_mask.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 
@@ -382,7 +383,7 @@ stylization
   color: var(--basicWhite);
 }
 
-.button.hotel-search:focus { /* Добавил для доступности */
+.button.hotel-search:focus {
   outline: 2px dotted var(--basicWhite);
   outline-offset: -3px;
 }
@@ -401,7 +402,7 @@ stylization
 
 .map {
   background-color: var(--map);
-  background-image: url('../img/content/jpg/map_image/map.jpg'); /* добавил, чтобы при отключении JavaScript на месте интерактивной карты не было пусого места */
+  background-image: url('../img/content/jpg/map_image/map.jpg');
   background-repeat: no-repeat;
   background-position: cover;
 
@@ -1213,7 +1214,7 @@ stylization
 .sorting-element {
   color: var(--basicBlack);
   mix-blend-mode: normal;
-  opacity: 0.54; /* изменил значение на максимально приближённое к макету, т. к. прежнее не соответствовало стандартам WCAG по уровню контрастности */
+  opacity: 0.54;
 
   border-bottom: 1px dotted var(--regularBlue);
 }
@@ -1269,7 +1270,7 @@ stylization
   background-color: var(--regularBlue);
 }
 
-.ins:focus { /* добавил свой стиль, потому что в Мозиле не работал стандартный */
+.ins:focus {
   outline: 1px dotted var(--basicWhite);
   outline-offset: -2px;
 }
@@ -1291,7 +1292,7 @@ stylization
   background-color: var(--regularBrown);
 }
 
-.booking:focus { /* добавил свой стиль, потому что в Мозиле не работал стандартный */
+.booking:focus {
   outline: 1px dotted var(--basicWhite);
   outline-offset: -2px;
 }
@@ -1455,6 +1456,7 @@ positioning
 .proposed-hotel {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   background-image: url('../img/decor/svg/down_line/down_line.svg');
   background-repeat: no-repeat;
@@ -1483,7 +1485,7 @@ positioning
 
 .info-box {
   width: 726px;
-  /* flex-grow: 1; */
+
   margin-left: 29px;
   margin-right: 29px;
 
@@ -1506,42 +1508,51 @@ positioning
 
 
 
+.info-text-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
 .hotel-type {
-  display: inline-block;
   width: 107px;
+
   margin-top: 7px;
   margin-bottom: 15.5px;
 
   text-align: left;
-  vertical-align: auto;
 }
 
 .day-min-price {
-  display: inline-block;
   width: 96px;
+
   margin-left: 9px;
   margin-top: 7px;
   margin-bottom: 15.5px;
 
   text-align: left;
-  vertical-align: auto;
+}
+
+
+
+.ins-and-booking {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
 
 .button.ins {
-  display: inline-block;
   width: 110px;
 
   padding-top: 3px;
   padding-bottom: 3px;
 
   text-align: center;
-  vertical-align: auto;
 }
 
 .button.booking {
-  display: inline-block;
   width: 142px;
 
   padding-top: 3px;
@@ -1549,7 +1560,6 @@ positioning
   margin-left: 6px;
 
   text-align: center;
-  vertical-align: auto;
 }
 
 
@@ -1577,14 +1587,11 @@ positioning
 
 .star-item {
   line-height: 0;
-
   margin-left: 5px;
 }
 
 .star-item > .link {
-  display: inline-block;
-
-  vertical-align: auto;
+  display: block;
 }
 
 
@@ -1596,8 +1603,6 @@ positioning
   margin-bottom: 0;
 
   padding-top: 3px;
-  /* padding-right: 12px; */
-  /* padding-left: 15px; */
   padding-bottom: 3px;
 
   display: flex;
@@ -1608,12 +1613,6 @@ positioning
 .number-of-points > .text:first-child {
   margin-right: 4px;
 }
-
-
-
-/* .hotel-name > .name-part-two {
-  margin-left: 1px;
-} */
 
 
 
@@ -1728,8 +1727,8 @@ filter
 
 .infrastructure-list > li:last-of-type,
 .housing-type-list > li:last-of-type {
-  padding-top: 26px; /*скорректировал по pixelperfect, значение по макету 22px*/
-  padding-bottom: 25px; /*скорректировал по pixelperfect, значение по макету 31px*/
+  padding-top: 26px;
+  padding-bottom: 25px;
 }
 
 
@@ -1799,11 +1798,11 @@ filter
 
 
 
-.checkbox-for-filtration:focus + .filter-checkbox-label { /* добавил для доступности */
+.checkbox-for-filtration:focus + .filter-checkbox-label {
   outline: 1px dotted var(--basicWhite);
 }
 
-.checkbox-for-filtration:checked:focus + .filter-checkbox-label { /* добавил для доступности */
+.checkbox-for-filtration:checked:focus + .filter-checkbox-label {
   outline: 1px dotted var(--basicWhite);
 }
 
@@ -1831,8 +1830,8 @@ filter
   justify-content: center;
   align-items: center;
 
-  padding-top: 4.5px; /*по макету значение 6.5px, но я отнял 2px, т.к. по вертикали border-box не пересчитывает*/
-  padding-bottom: 6.5px; /*по макету значение 8.5px, но я отнял 2px, т.к. по вертикали border-box не пересчитывает*/
+  padding-top: 4.5px;
+  padding-bottom: 6.5px;
 
   color: var(--basicWhite);
   border: none;
@@ -1852,7 +1851,6 @@ filter
 
 .filter-input-field {
   border: none;
-  /* outline: none; */
   color: var(--basicWhite);
   background-color: var(--fullOpacityWhite);
 }
@@ -1871,7 +1869,7 @@ filter
 
 .controls-wrapper {
   width: 316px;
-  height: 11.5px; /*высота расчитывалась как (21px - padding-top) для центрирования bar-shell*/
+  height: 11.5px;
 
   margin: 11px auto 23px;
   padding-top: calc((21px - 2px)/2);
@@ -1934,10 +1932,10 @@ filter
   width: 137px;
   box-sizing: border-box;
 
-  padding-top: 5px; /*по макету значение 7px, но я отнял 2px, т.к. по вертикали border-box не пересчитывает*/
+  padding-top: 5px;
   padding-right: 35px;
   padding-left: 36px;
-  padding-bottom: 6px; /*по макету значение 8px, но я отнял 2px, т.к. по вертикали border-box не пересчитывает*/
+  padding-bottom: 6px;
 
   margin-top: 0;
   margin-right: 95px;
@@ -2123,7 +2121,7 @@ hotel search window
   cursor: pointer;
 }
 
-.calendar-button:focus .calendar-svg-fill { /* добавил для доступности */
+.calendar-button:focus .calendar-svg-fill {
   fill: var(--basicBlack);
 }
 
@@ -2140,20 +2138,35 @@ hotel search window
 .adults-count-zone,
 .children-count-zone {
   display: inline-block;
-  width: calc(var(--searchFormContentWrapperWidth)/2);
-  height: 38px; /* не смог получить высоту строки только при помощи padding и margin вложенных элементов без явного задания "height": если ставлю значения по макету, то результат больше 38px*/
-  vertical-align: auto;
+  height: 38px;
+  vertical-align: middle;
+}
+
+.adults-count-zone {
+  width: 229px;
 }
 
 .children-count-zone {
-  text-align: right;
+  width: 225.45px;
 }
 
-.adults,
-.children,
+
+
+.adults-positioning-wrapper,
+.children-positioning-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.children-positioning-wrapper {
+  justify-content: flex-end;
+}
+
+
+
 .amount-interface {
-  display: inline-block;
-  vertical-align: auto;
+  display: flex;
 }
 
 .adults {
@@ -2164,7 +2177,6 @@ hotel search window
 .children {
   width: 65px;
   height: 100%;
-  text-align: left;
 }
 
 .amount-interface {
@@ -2232,7 +2244,7 @@ hotel search window
   vertical-align: middle;
 }
 
-.minus-adult-man:focus  .plus-minus-svg-fill { /* добавил для доступности */
+.minus-adult-man:focus  .plus-minus-svg-fill {
   fill: var(--basicBlack);
 }
 
@@ -2244,7 +2256,7 @@ hotel search window
   fill: var(--regularBlue);
 }
 
-.plus-adult-man:focus  .plus-minus-svg-fill { /* добавил для доступности */
+.plus-adult-man:focus  .plus-minus-svg-fill {
   fill: var(--basicBlack);
 }
 
@@ -2256,7 +2268,7 @@ hotel search window
   fill: var(--regularBlue);
 }
 
-.minus-child-man:focus  .plus-minus-svg-fill { /* добавил для доступности */
+.minus-child-man:focus  .plus-minus-svg-fill {
   fill: var(--basicBlack);
 }
 
@@ -2268,7 +2280,7 @@ hotel search window
   fill: var(--regularBlue);
 }
 
-.plus-child-man:focus  .plus-minus-svg-fill { /* добавил для доступности */
+.plus-child-man:focus  .plus-minus-svg-fill {
   fill: var(--basicBlack);
 }
 
