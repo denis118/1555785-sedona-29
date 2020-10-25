@@ -1,9 +1,39 @@
+/*****fonts*****/
+
+
+/* pt-sans-regular - latin_cyrillic */
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'),
+       url('../fonts/pt_sans_v11_latin_cyrillic_regular.woff2') format('woff2'),
+       url('../fonts/pt_sans_v11_latin_cyrillic_regular.woff') format('woff');
+
+  font-display: swap;
+}
+
+/* pt-sans-700 - latin_cyrillic */
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans'), local('PTSans');
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+       url('../fonts/pt_sans_v11_latin_cyrillic_700.woff2') format('woff2'),
+       url('../fonts/pt_sans_v11_latin_cyrillic_700.woff') format('woff');
+
+  font-display: swap;
+}
+
+
 
 :root {
   --basicWhite: #FFFFFF;
   --basicOpacityWhite: rgba(255, 255, 255, 0.3);
   --fullOpacityWhite: rgba(255, 255, 255, 0);
-  --basicWhite: #FFFFFF;
   --basicBlack: #000000;
   --lightBlack: #231F20;
 
@@ -81,7 +111,7 @@
   margin-left: auto;
 
   background-color: var(--basicWhite);
-  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0 5px 15px var(--mainContainerShadow);
 }
 
 
@@ -152,7 +182,7 @@ stylization
 }
 
 .first-page-link::before {
-  content: "";
+  content: '';
   width: 138px;
   height: 70px;
 
@@ -300,7 +330,7 @@ stylization
 }
 
 .outstanding-qualities::before {
-  content: "";
+  content: '';
 
   display: block;
   width: 1200px;
@@ -551,7 +581,7 @@ positioning
 }
 
 .small-city-life::before {
-  content: "-№1-";
+  content: '\2014№1\2014';
   width: 51px;
   height: 21px;
 
@@ -561,7 +591,7 @@ positioning
   margin-left: auto;
   margin-bottom: 23px;
 
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -622,7 +652,7 @@ positioning
   content: '';
   width: 75px;
   height: 72px;
-  background-image: url('../img/decor/svg/true_city_list_item_icons/icon-1_w75px_h72px.svg');
+  background-image: url('../img/decor/svg/true_city_list_item_icons/housing_icon_w75px_h72px.svg');
 
   padding: 0;
   margin-top: 60px;
@@ -662,7 +692,7 @@ positioning
   content: '';
   width: 75px;
   height: 70px;
-  background-image: url('../img/decor/svg/true_city_list_item_icons/icon-3_w75px_h70px.svg');
+  background-image: url('../img/decor/svg/true_city_list_item_icons/food_icon_w75px_h70px.svg');
 
   padding: 0;
   margin-top: 61px;
@@ -702,7 +732,7 @@ positioning
   content: '';
   width: 64px;
   height: 77px;
-  background-image: url('../img/decor/svg/true_city_list_item_icons/icon-2_w64px_h77px.svg');
+  background-image: url('../img/decor/svg/true_city_list_item_icons/souvenirs_icon_w64px_h77px.svg');
 
   padding: 0;
   margin-top: 55px;
@@ -752,7 +782,7 @@ positioning
 }
 
 .devil-bridge-sight::before {
-  content: "-№2-";
+  content: '\2014№2\2014';
   width: 51px;
   height: 21px;
 
@@ -762,7 +792,7 @@ positioning
   margin-left: auto;
   margin-bottom: 23px;
 
-  font-family: PT Sans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -788,7 +818,7 @@ positioning
 }
 
 .devil-bridge-sight .text {
-  width: 301px;
+  width: 305px;
 
   padding: 0;
   margin-top: 0;
@@ -810,7 +840,7 @@ positioning
 }
 
 .small-area::before {
-  content: "-№3-";
+  content: '\2014№3\2014';
   width: 51px;
   height: 21px;
 
@@ -818,7 +848,7 @@ positioning
   margin-top: 25px;
   margin-bottom: 23px;
 
-  font-family: PT Sans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -862,7 +892,7 @@ positioning
 }
 
 .beautiful-road::before {
-  content: "-№4-";
+  content: '\2014№4\2014';
   width: 51px;
   height: 21px;
 
@@ -870,7 +900,7 @@ positioning
   margin-top: 25px;
   margin-bottom: 23px;
 
-  font-family: PT Sans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -914,7 +944,7 @@ positioning
 }
 
 .few-tourists::before {
-  content: "-№5-";
+  content: '\2014№5\2014';
   width: 51px;
   height: 21px;
 
@@ -922,7 +952,7 @@ positioning
   margin-top: 25px;
   margin-bottom: 23px;
 
-  font-family: PT Sans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1744,7 +1774,7 @@ filter
 }
 
 .checkbox-for-filtration + label::before {
-  content: "";
+  content: '';
   position: absolute;
   left: -40px;
   top: 0;
@@ -1755,7 +1785,7 @@ filter
 }
 
 .checkbox-for-filtration + label::after {
-  content: "";
+  content: '';
   position: absolute;
   left: -40px;
   top: 0;
@@ -1948,7 +1978,7 @@ filter
   color: var(--basicWhite);
   background-color: var(--fullOpacityWhite);
 
-  font-family: inherit;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -1995,7 +2025,7 @@ hotel search window
 
   transition: all 0.3s cubic-bezier(.18,.89,.32,1.28);
 
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 26px;
@@ -2009,7 +2039,7 @@ hotel search window
 }
 
 .input-field {
-  font-family: inherit;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -2305,7 +2335,7 @@ hotel search window
   background-color: var(--regularBlue);
   cursor: pointer;
 
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: inherit;
   line-height: inherit;
   font-size: 21px;
